@@ -14,28 +14,9 @@
 
         <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i," rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-        <link rel="stylesheet" href="{% static 'css/common.css' %}">
-        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <link rel="stylesheet" href="{% static 'preludered/pr-main.css' %}">
     </head>
     <body>
-
-        <nav class="main clearfix">
-            <ul>
-                <li><a href="/">Celeste Krishna</a></li>
-                <li class="menu">
-                    <a href="{% url 'home:works' %}">Works</a>
-                    <ul class="menu">
-                        <li><a href="#">Uncle Yes</a></li>
-                        <li><a href="#">My Blue House</a></li>
-                        <li><a href="/preludered">Prelude Red</a></li>
-                        <li><a href="https://monarchsfamily.bandcamp.com/album/ft-celeste-mixtape">Mixtape</a></li>
-                        <li><a href="#">Monarchs</a></li>
-                    </ul>
-                </li>
-                <li><a href="{% url 'home:live' %}">Live</a></li>
-                <li><a href="{% url 'home:connect' %}">Connect</a></li>
-            </ul>
-        </nav>
 
 
         {% block content %}{% endblock %}
@@ -46,7 +27,6 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="{% static 'js/plugins.js' %}"></script>
         <script src="{% static 'js/main.js' %}"></script>
-
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <!--
         <script>
