@@ -2,3 +2,43 @@ body {
     background:url('../img/bg-pr.jpg');
     background-size: 100%;
 }
+
+.pagePreludered {
+    width:935px;
+    margin:0 auto;
+}
+
+    .columnLeft {
+        float:left;
+        width:467px;
+    }
+        .albumCover {
+            -webkit-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);
+            -moz-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);
+            box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);
+        }
+
+    .columnRight {
+        float:right;
+        width:467px;
+        text-align:right;
+    }
+        .playerWrap {
+            margin:0 0 0 auto;
+            background:url('../img/player-bg.jpg');
+            width:401px;
+            height:400px;
+            text-align:center;
+            position:relative;
+            -webkit-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);
+            -moz-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);
+            box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);
+        }
+            img.playerClip {
+                position:absolute;
+                margin:5px 0 0 162px;
+            }
+            iframe#player {
+                margin:30px 0 0 0;
+            }
+

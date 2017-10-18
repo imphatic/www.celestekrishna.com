@@ -1,0 +1,27 @@
+{% load static %}
+
+<img src="{% static 'img/player-circle.png' %}" usemap="#Map">
+<map name="Map" id="Map">
+    <area alt="" title="" href="javascript: player.play(1);" shape="poly" coords="172,173,98,31,173,11" />
+    <area alt="" title="" href="javascript: player.play(2);" shape="poly" coords="175,173,176,12,251,32" />
+    <area alt="" title="" href="javascript: player.play(3);" shape="poly" coords="173,170,253,34,311,87" />
+    <area alt="" title="" href="javascript: player.play(4);" shape="poly" coords="175,170,312,91,334,155" />
+    <area alt="" title="" href="javascript: player.play(5);" shape="poly" coords="177,174,333,157,322,234" />
+    <area alt="" title="" href="javascript: player.play(6);" shape="poly" coords="175,175,320,234,276,297" />
+    <area alt="" title="" href="javascript: player.play(7);" shape="poly" coords="175,177,276,299,208,332" />
+    <area alt="" title="" href="javascript: player.play(8);" shape="poly" coords="171,175,206,332,132,331" />
+    <area alt="" title="" href="javascript: player.play(9);" shape="poly" coords="173,175,130,330,64,294" />
+    <area alt="" title="" href="javascript: player.play(10);" shape="poly" coords="169,175,63,292,21,231" />
+    <area alt="" title="" href="javascript: player.play(11);" shape="poly" coords="168,173,21,228,12,154" />
+    <area alt="" title="" href="javascript: player.play(12);" shape="poly" coords="168,171,13,152,41,81" />
+    <area alt="" title="" href="javascript: player.play(13);" shape="poly" coords="166,168,40,79,95,33" />
+</map>
+
+
+<script type="text/javascript">
+    var player = {
+          play : function(track){
+            alert('playing: ' + track);
+          }
+    };
+</script>
