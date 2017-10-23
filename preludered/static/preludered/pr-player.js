@@ -66,6 +66,92 @@ var player =
 };
 
 
+var nav =
+{
+    locations : {
+        'prelude-red' : {
+            'hover' : 'nav-prelude-red.png',
+            'click' : function() {
+                nav.load_page('/preludered/nav/prelude-red');
+            }
+        },
+        'libretto' : {
+            'hover' : 'nav-libretto.png',
+            'click' : function() {
+                nav.load_page('/preludered/nav/libretto');
+            }
+        },
+        'notes' : {
+            'hover' : 'nav-notes.png',
+            'click' : function() {
+                nav.load_page('/preludered/nav/notes');
+            }
+        },
+        'credits' : {
+            'hover' : 'nav-credits.png',
+            'click' : function() {
+                nav.load_page('/preludered/nav/credits');
+            }
+        },
+        'music-videos' : {
+            'hover' : 'nav-music-videos.png',
+            'click' : function() {
+                nav.load_page('/preludered/nav/music-videos');
+            }
+        }
+    },
+
+    init : function() {
+        for (var key in this.locations)
+        {
+            if (this.locations.hasOwnProperty(key))
+            {
+                var loc = this.locations[key];
+
+                // Preload image so its not fetched on each hover
+                this.locations[key].hoverimg = new Image();
+                this.locations[key].hoverimg.src = '/static/img/' + loc.hover;
+
+                // Create hover listener
+                $('.nav-' + key).hover(this.hover(loc),
+                function() {
+                    $('.nav > img').attr('src', '/static/img/nav.png');
+                });
+
+                // Create click listener
+                $('.nav-' + key).click(this.click(loc))
+            }
+        }
+        console.log(this.locations);
+    },
+
+    hover : function(loc)
+    {
+        return function(event)
+        {
+            $('.nav > img').attr('src', '/static/img/' + loc.hover);
+        }
+    },
+
+    click : function(loc)
+    {
+        return function(event)
+        {
+            loc.click();
+            return false;
+        }
+    },
+
+    load_page : function(url)
+    {
+        $.get(url, function(data) {
+            $(".columnLeftPage").html(data);
+        });
+    },
+
+}
+
 $(document).ready(function(){
     player.init();
+    nav.init();
 });
