@@ -1,6 +1,14 @@
+{% load static %}
 <div class="libretto">
-    <ul class="book">
-
-    </ul>
+    <div class="fotorama"
+         data-maxheight="523"
+         data-allowfullscreen="true"
+         data-nav="false">
+        <img src="{% static 'img/example-libretto.jpg' %}">
+        <img src="{% static 'img/example-libretto.jpg' %}">
+    </div>
 </div>
 
+<script type="text/javascript">
+$('.fotorama').fotorama();
+</script>
