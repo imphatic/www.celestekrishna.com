@@ -1,37 +1,29 @@
-var curDeg = 0;
-$.fn.animateRotate = function(angle, duration, easing, complete)
+$.fn.animateRotate = function(from, to, duration, easing, complete)
 {
     var args = $.speed(duration, easing, complete);
     var step = args.step;
+
     return this.each(function(i, e) {
         args.step = function(now) {
             $.style(e, 'transform', 'rotate(' + now + 'deg)');
             if (step) return step.apply(this, arguments);
         };
 
-        $({deg: curDeg}).animate({deg: angle}, args);
-        curDeg = angle;
+        $({deg: from}).animate({deg: to}, args);
     });
-
 };
 
-
-var rotation = 0;
-function rotate()
-{
-    rotation -= 20;
-    $('#playerCircle').animateRotate(rotation, 500, 'swing');
-    return false;
-}
 
 var player =
 {
     circle : null,
     currentRotation : 0,
+    currentTrackStartingRotation: 0,
     rotationSpaceBetweenTracks : 0,
 
     totalTracks : 13,
     currentTrack : 1,
+    playlist : [],
     lockAnimation : 0,
 
     init : function()
@@ -45,6 +37,11 @@ var player =
         if(this.lockAnimation) return;
         this.lockAnimation = 1;
 
+        if(this.playlist[this.currentTrack] && this.playlist[this.currentTrack].playing())
+        {
+            this.stop();
+        }
+
         if(track < this.currentTrack)
         {
            var tracksToSkip = (this.totalTracks - this.currentTrack) + track;
@@ -52,17 +49,108 @@ var player =
             var tracksToSkip = track - this.currentTrack;
         }
 
+        var moveTo = (this.rotationSpaceBetweenTracks * tracksToSkip) + this.currentTrackStartingRotation;
 
-        var moveTo = (this.rotationSpaceBetweenTracks * tracksToSkip) + this.currentRotation;
-        this.currentRotation = moveTo;
-
-        this.circle.animateRotate(moveTo, 500, 'swing', function() {
+        this.circle.animateRotate(this.currentRotation, moveTo, 500, 'swing', function() {
             player.lockAnimation = 0;
         });
 
+        this.currentRotation = moveTo;
+        this.currentTrackStartingRotation = moveTo;
         this.currentTrack = track;
-        console.log('play track: ' + track, 'spaceBetweenTracks: ' + this.rotationSpaceBetweenTracks, 'moveTo:' + moveTo);
-    }
+
+        if(this.playlist[track] && this.playlist[track].state() == 'loaded')
+        {
+            this.playlist[track].play();
+        } else {
+            var trackObj = this.loadTrack(track);
+            trackObj.once("load", function() {
+                this.play();
+            });
+        }
+    },
+
+    pause : function()
+    {
+        if(!this.playlist[this.currentTrack]) return false;
+
+        if(!this.playlist[this.currentTrack].playing()) {
+            $('.playerDirections > img').attr('src', '/static/img/player-directions-whenplaying.png');
+            this.playlist[this.currentTrack].play();
+        } else {
+            $('.playerDirections > img').attr('src', '/static/img/player-directions-whenpaused.png');
+            this.playlist[this.currentTrack].pause();
+        }
+    },
+
+    stop : function()
+    {
+        this.playlist[this.currentTrack].stop();
+    },
+
+    getNextTrackNumber : function()
+    {
+        var next = this.currentTrack + 1;
+        return (next > this.totalTracks) ? 1 : next;
+    },
+
+    playNextTrack : function()
+    {
+        this.stop();
+        this.play(this.getNextTrackNumber());
+    },
+
+    loadNextTrack : function()
+    {
+        if(!this.playlist[this.getNextTrackNumber()])
+        {
+            this.loadTrack(this.getNextTrackNumber());
+        }
+    },
+
+    loadTrack : function(track)
+    {
+        this.playlist[track] = new Howl({
+            src : ['/static/preludered/music/' + track + '.mp3'],
+            onplay: function() {
+                requestAnimationFrame(player.step.bind(player));
+            },
+            onend: function() {
+                player.playNextTrack();
+            }
+        });
+
+        return this.playlist[track];
+    },
+
+    step: function() {
+        var self = this;
+
+        // Determine our current seek position.
+        var currentTrack = this.playlist[this.currentTrack];
+
+        var seek = currentTrack.seek() || 0;
+        var percent = ((seek / currentTrack.duration()) || 0);
+        var change = this.rotationSpaceBetweenTracks * percent;
+        var rotation = this.currentTrackStartingRotation + change;
+        this.currentRotation = rotation;
+        if(!this.lockAnimation)
+        {
+            this.circle.css('transform', 'rotate(' + rotation + 'deg)');
+        }
+
+        // At 75% though the track, start loading the next one
+        if(Math.floor(percent * 100) > 74)
+        {
+            this.loadNextTrack();
+        }
+
+        // If the song is still playing, continue stepping.
+        if (currentTrack.playing())
+        {
+          requestAnimationFrame(self.step.bind(self));
+        }
+    },
 };
 
 
@@ -154,4 +242,7 @@ var nav =
 $(document).ready(function(){
     player.init();
     nav.init();
+
+    track = Math.floor((Math.random() * player.totalTracks) + 1);
+    player.play(track);
 });

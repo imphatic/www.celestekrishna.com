@@ -16,8 +16,11 @@
         <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
         <link rel="stylesheet" href="{% static 'css/common.css' %}">
         <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        {% block other_head %}{% endblock %}
+
+
     </head>
-    <body>
+    <body class="{{ body_class }}">
 
         <nav class="main clearfix">
             <ul>
@@ -27,7 +30,7 @@
                     <ul class="menu">
                         <li><a href="#">Uncle Yes</a></li>
                         <li><a href="#">My Blue House</a></li>
-                        <li><a href="/preludered">Prelude Red</a></li>
+                        <li><a href="{% url 'preludered:index' %}">Prelude Red</a></li>
                         <li><a href="https://monarchsfamily.bandcamp.com/album/ft-celeste-mixtape">Mixtape</a></li>
                         <li><a href="#">Monarchs</a></li>
                     </ul>
@@ -46,6 +49,9 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="{% static 'js/plugins.js' %}"></script>
         <script src="{% static 'js/main.js' %}"></script>
+
+
+        {% block other_foot %}{% endblock %}
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <!--

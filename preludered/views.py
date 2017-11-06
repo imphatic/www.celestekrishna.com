@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'preludered/index.html')
+    return render(request, 'preludered/index.html', {'body_class': 'preludered'})
 
 
 def nav_prelude_red(request):

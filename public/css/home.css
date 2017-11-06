@@ -1,6 +1,10 @@
 
 body {
-    background:url('../img/bg-home.jpg');
+    background: url('../img/bg-home.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     color:#000000;
     padding:8px 18px;
 }
