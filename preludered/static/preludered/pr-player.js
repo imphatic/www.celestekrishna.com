@@ -166,7 +166,7 @@ var nav =
         'libretto' : {
             'hover' : 'nav-libretto.png',
             'click' : function() {
-                nav.load_page('/preludered/nav/libretto');
+                nav.load_page('/preludered/nav/libretto/' + player.currentTrack);
             }
         },
         'notes' : {

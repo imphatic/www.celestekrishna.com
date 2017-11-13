@@ -5,7 +5,13 @@ from django.db import models
 
 class Music(models.Model):
     track_number = models.IntegerField(default=0)
+    title = models.CharField(max_length=255, default='')
     image = models.FileField(upload_to='public/uploads/', default='')
+
+    def libretto_image(self):
+        return '<img src="/static/%s" height="100" />' % self.image
+
+    libretto_image.allow_tags = True
 
     class Meta:
         verbose_name = 'Music'
@@ -14,7 +20,13 @@ class Music(models.Model):
 
 class Notes(models.Model):
     image = models.FileField(upload_to='public/uploads/', default='')
+    title = models.CharField(max_length=255, default='')
     order = models.IntegerField(default=0)
+
+    def admin_image(self):
+        return '<img src="/static/%s" height="100" />' % self.image
+
+    admin_image.allow_tags = True
 
     class Meta:
         verbose_name = 'Note'
@@ -22,8 +34,14 @@ class Notes(models.Model):
 
 
 class Credits(models.Model):
-    image = models.FileField(upload_to='public/uploads/', default='')
     order = models.IntegerField(default=0)
+    image = models.FileField(upload_to='uploads/', default='')
+    title = models.CharField(max_length=255, default='')
+
+    def admin_image(self):
+        return '<img src="/static/%s" height="100" />' % self.image
+
+    admin_image.allow_tags = True
 
     class Meta:
         verbose_name = 'Credits'
@@ -31,8 +49,9 @@ class Credits(models.Model):
 
 
 class MusicVideos(models.Model):
-    embed = models.CharField(max_length=500)
     order = models.IntegerField(default=0)
+    title = models.CharField(max_length=255, default='')
+    href = models.CharField(max_length=500, default='')
 
     class Meta:
         verbose_name = 'Music Video'

@@ -18,6 +18,7 @@ img[usemap], map area{
     .columnLeft {
         float:left;
         width:467px;
+        position:relative;
     }
         .nav {
             padding:10px 0 0 0;
@@ -42,6 +43,13 @@ img[usemap], map area{
 
         .credits {
             padding:142px 0 0 0;
+        }
+
+        .musicVideos {
+            padding:137px 0 0 0;
+            width:560px;
+            position:relative;
+            left:-93px;
         }
 
     .columnRight {
@@ -69,16 +77,16 @@ img[usemap], map area{
         }
             .playerCenterCircle {
                 position:absolute;
-                top:167px;
-                left:167px;
+                top:169px;
+                left:165px;
                 z-index:20;
             }
             img.playerClip {
                 position:absolute;
-                margin:5px 0 0 162px;
+                margin:5px 0 0 151px;
             }
             #playerCircle {
-                margin:30px 0 0 0;
+                margin:41px 0 0 0;
             }
 
 .bottomRight {

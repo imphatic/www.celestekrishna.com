@@ -4,8 +4,9 @@
          data-maxheight="406"
          data-allowfullscreen="true"
          data-nav="false">
-        <img src="{% static 'img/example-credits.jpg' %}">
-        <img src="{% static 'img/example-credits.jpg' %}">
+        {% for credit in credits %}
+        <img src="{% static credit.image %}">
+        {% endfor %}
     </div>
 </div>
 

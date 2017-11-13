@@ -1,11 +1,14 @@
 {% load static %}
+
 <div class="notes">
     <div class="fotorama"
          data-maxheight="406"
          data-allowfullscreen="true"
-         data-nav="false">
-        <img src="{% static 'img/example-notes.jpg' %}">
-        <img src="{% static 'img/example-notes.jpg' %}">
+         data-nav="false"
+         data-startindex="{{ start_pos }}">
+        {% for note in notes %}
+        <img src="{% static note.image %}">
+        {% endfor %}
     </div>
 </div>
 
