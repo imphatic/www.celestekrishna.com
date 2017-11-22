@@ -31,9 +31,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = env['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env['DEBUG']
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['138.197.90.112', 'localhost', '127.0.0.1']
 
 
 # Application definition
