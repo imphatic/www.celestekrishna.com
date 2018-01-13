@@ -34,6 +34,7 @@ var player =
 
     play : function(track)
     {
+        if(this.lockAnimation) return;
         $('.playerDirections > img').attr('src', '/static/img/player-directions-whenplaying.png');
 
         if(this.playlist[this.currentTrack] && this.playlist[this.currentTrack].playing())
@@ -45,10 +46,12 @@ var player =
 
         if(this.playlist[track] && this.playlist[track].state() == 'loaded')
         {
+            this.pauseAll();
             this.playlist[track].play();
         } else {
             var trackObj = this.loadTrack(track);
             trackObj.once("load", function() {
+                player.pauseAll();
                 this.play();
             });
         }
@@ -67,6 +70,16 @@ var player =
         } else {
             $('.playerDirections > img').attr('src', '/static/img/player-directions-whenpaused.png');
             this.playlist[this.currentTrack].pause();
+        }
+    },
+
+    pauseAll : function()
+    {
+        for (var track = 1; track < this.totalTracks; track++) {
+            if(this.playlist[track] && this.playlist[track].state() == 'loaded')
+            {
+                this.playlist[track].pause();
+            }
         }
     },
 
