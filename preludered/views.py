@@ -6,7 +6,11 @@ import random
 
 
 def index(request):
-    return render(request, 'preludered/index.html', {'body_class': 'preludered'})
+    auto_play = request.session.get('auto_play', 1)
+    request.session['auto_play'] = 0
+
+    return render(request, 'preludered/index.html',
+                  {'body_class': 'preludered', 'auto_play': auto_play})
 
 
 def nav_prelude_red(request):

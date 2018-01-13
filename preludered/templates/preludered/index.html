@@ -32,7 +32,7 @@
     <div class="columnRight">
 
         <div class="playerDirections">
-            <img src="{% static 'img/player-directions-whenplaying.png' %}">
+            <img src="{% static 'img/player-directions-whenpaused.png' %}">
         </div>
         <div class="playerWrap">
             <a href="javascript: player.pause();" class="playerCenterCircle">
@@ -80,5 +80,19 @@
 <script src="{% static 'preludered/howler.js' %}"></script>
 <script src="{% static 'preludered/pr-player.js' %}"></script>
 
+<script type='text/javascript'>
+$(document).ready(function(){
+    player.init();
+    nav.init();
+
+    track = Math.floor((Math.random() * player.totalTracks) + 1);
+
+    {% if auto_play == 1 %}
+        player.play(track);
+    {% else %}
+        player.positionCircle(track);
+    {% endif %}
+});
+</script>
 
 {% endblock %}

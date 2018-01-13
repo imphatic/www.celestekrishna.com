@@ -34,30 +34,14 @@ var player =
 
     play : function(track)
     {
-        if(this.lockAnimation) return;
-        this.lockAnimation = 1;
+        $('.playerDirections > img').attr('src', '/static/img/player-directions-whenplaying.png');
 
         if(this.playlist[this.currentTrack] && this.playlist[this.currentTrack].playing())
         {
             this.stop();
         }
 
-        if(track < this.currentTrack)
-        {
-           var tracksToSkip = (this.totalTracks - this.currentTrack) + track;
-        } else {
-            var tracksToSkip = track - this.currentTrack;
-        }
-
-        var moveTo = (this.rotationSpaceBetweenTracks * tracksToSkip) + this.currentTrackStartingRotation;
-
-        this.circle.animateRotate(this.currentRotation, moveTo, 500, 'swing', function() {
-            player.lockAnimation = 0;
-        });
-
-        this.currentRotation = moveTo;
-        this.currentTrackStartingRotation = moveTo;
-        this.currentTrack = track;
+        this.positionCircle(track);
 
         if(this.playlist[track] && this.playlist[track].state() == 'loaded')
         {
@@ -72,7 +56,10 @@ var player =
 
     pause : function()
     {
-        if(!this.playlist[this.currentTrack]) return false;
+        if(!this.playlist[this.currentTrack]) {
+            this.play(this.currentTrack);
+            return false;
+        }
 
         if(!this.playlist[this.currentTrack].playing()) {
             $('.playerDirections > img').attr('src', '/static/img/player-directions-whenplaying.png');
@@ -106,6 +93,30 @@ var player =
         {
             this.loadTrack(this.getNextTrackNumber());
         }
+    },
+
+    positionCircle : function(track)
+    {
+        if(this.lockAnimation) return;
+        this.lockAnimation = 1;
+
+        if(track < this.currentTrack)
+        {
+           var tracksToSkip = (this.totalTracks - this.currentTrack) + track;
+        } else {
+            var tracksToSkip = track - this.currentTrack;
+        }
+
+        var moveTo = (this.rotationSpaceBetweenTracks * tracksToSkip) + this.currentTrackStartingRotation;
+
+        this.circle.animateRotate(this.currentRotation, moveTo, 500, 'swing', function() {
+            player.lockAnimation = 0;
+        });
+
+        this.currentRotation = moveTo;
+        this.currentTrackStartingRotation = moveTo;
+
+        this.currentTrack = track;
     },
 
     loadTrack : function(track)
@@ -239,10 +250,4 @@ var nav =
 
 }
 
-$(document).ready(function(){
-    player.init();
-    nav.init();
 
-    track = Math.floor((Math.random() * player.totalTracks) + 1);
-    player.play(track);
-});
