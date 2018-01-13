@@ -35,7 +35,7 @@ var player =
     play : function(track)
     {
         if(this.lockAnimation) return;
-        $('.playerDirections > img').attr('src', '/static/img/player-directions-whenplaying.png');
+        this.playAnimations();
 
         if(this.playlist[this.currentTrack] && this.playlist[this.currentTrack].playing())
         {
@@ -65,10 +65,10 @@ var player =
         }
 
         if(!this.playlist[this.currentTrack].playing()) {
-            $('.playerDirections > img').attr('src', '/static/img/player-directions-whenplaying.png');
+            this.playAnimations();
             this.playlist[this.currentTrack].play();
         } else {
-            $('.playerDirections > img').attr('src', '/static/img/player-directions-whenpaused.png');
+            this.pauseAnimations();
             this.playlist[this.currentTrack].pause();
         }
     },
@@ -81,6 +81,16 @@ var player =
                 this.playlist[track].pause();
             }
         }
+    },
+
+    pauseAnimations : function()
+    {
+        $('.playerDirections > img').attr('src', '/static/img/player-directions-whenpaused.png');
+    },
+
+    playAnimations : function ()
+    {
+        $('.playerDirections > img').attr('src', '/static/img/player-directions-whenplaying.png');
     },
 
     stop : function()

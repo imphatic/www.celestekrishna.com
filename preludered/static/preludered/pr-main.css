@@ -77,10 +77,18 @@ img[usemap], map area{
         }
             .playerCenterCircle {
                 position:absolute;
+                display:block;
+                height:70px;
+                width:69px;
                 top:169px;
                 left:165px;
                 z-index:20;
+                background:url('../img/player-center-circle.png');
             }
+            .playerCenterCircle:hover {
+                background:url('../img/player-center-circle-hover.png');
+            }
+
             img.playerClip {
                 position:absolute;
                 margin:5px 0 0 151px;
