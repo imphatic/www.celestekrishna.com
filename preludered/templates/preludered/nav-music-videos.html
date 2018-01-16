@@ -4,7 +4,7 @@
              data-nav="false"
              data-width="560">
              {% for video in music_videos %}
-                <a href="{{ video.href }}"></a>
+                <a href="{{ video.href }}" data-caption="{{ video.title }}"></a>
              {% endfor %}
     </div>
 </div>
@@ -17,3 +17,16 @@
         }
     });
 </script>
+<style type="text/css">
+    div.fotorama__caption {
+        top: 12px;
+        width: 100%;
+        text-align: center;
+        height:50px;
+    }
+    div.fotorama__caption__wrap {
+        background:none;
+        color:#ffffff;
+        font-family: 'Libre Baskerville', serif;
+    }
+</style>

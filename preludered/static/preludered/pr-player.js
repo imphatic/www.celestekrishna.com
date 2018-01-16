@@ -242,9 +242,15 @@ var nav =
 
                 // Create click listener
                 $('.nav-' + key).click(this.click(loc))
+
+                // Load hash requested location
+                var hash = window.location.hash.substr(1);
+                if(hash && typeof this.locations[hash] !== 'undefined')
+                {
+                    this.locations[hash].click();
+                }
             }
         }
-        console.log(this.locations);
     },
 
     hover : function(loc)
