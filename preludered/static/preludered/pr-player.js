@@ -85,12 +85,12 @@ var player =
 
     pauseAnimations : function()
     {
-        $('.playerDirections > img').attr('src', '/static/img/player-directions-whenpaused.png');
+        $('.playerDirections span').html('Play');
     },
 
     playAnimations : function ()
     {
-        $('.playerDirections > img').attr('src', '/static/img/player-directions-whenplaying.png');
+        $('.playerDirections span').html('Pause');
     },
 
     stop : function()
@@ -192,31 +192,26 @@ var nav =
 {
     locations : {
         'prelude-red' : {
-            'hover' : 'nav-prelude-red.png',
             'click' : function() {
                 nav.load_page('/preludered/nav/prelude-red');
             }
         },
         'libretto' : {
-            'hover' : 'nav-libretto.png',
             'click' : function() {
                 nav.load_page('/preludered/nav/libretto/' + player.currentTrack);
             }
         },
         'notes' : {
-            'hover' : 'nav-notes.png',
             'click' : function() {
                 nav.load_page('/preludered/nav/notes');
             }
         },
         'credits' : {
-            'hover' : 'nav-credits.png',
             'click' : function() {
                 nav.load_page('/preludered/nav/credits');
             }
         },
         'music-videos' : {
-            'hover' : 'nav-music-videos.png',
             'click' : function() {
                 nav.load_page('/preludered/nav/music-videos');
             }
@@ -230,16 +225,6 @@ var nav =
             {
                 var loc = this.locations[key];
 
-                // Preload image so its not fetched on each hover
-                this.locations[key].hoverimg = new Image();
-                this.locations[key].hoverimg.src = '/static/img/' + loc.hover;
-
-                // Create hover listener
-                $('.nav-' + key).hover(this.hover(loc),
-                function() {
-                    $('.nav > img').attr('src', '/static/img/nav.png');
-                });
-
                 // Create click listener
                 $('.nav-' + key).click(this.click(loc))
 
@@ -250,14 +235,6 @@ var nav =
                     this.locations[hash].click();
                 }
             }
-        }
-    },
-
-    hover : function(loc)
-    {
-        return function(event)
-        {
-            $('.nav > img').attr('src', '/static/img/' + loc.hover);
         }
     },
 

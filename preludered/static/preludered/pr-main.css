@@ -11,7 +11,7 @@ img[usemap], map area{
 }
 
 .pagePreludered {
-    width:935px;
+    max-width:935px;
     margin:0 auto;
 }
 
@@ -24,7 +24,17 @@ img[usemap], map area{
             padding:10px 0 0 0;
             width:402px;
             text-align:center;
+            font-style:normal;
+            color:#ffffff;
         }
+            .nav a {
+                color:#ffffff;
+                padding:0 5px;
+            }
+
+            .nav a:hover {
+                color:#ca1520;
+            }
 
         .albumCover {
             padding:142px 0 33px 0;
@@ -59,10 +69,11 @@ img[usemap], map area{
     }
         .playerDirections {
             display:inline-block;
-            padding:67px 0 0 0;
-            height:75px;
+            padding:93px 0 0 0;
+            height:48px;
             width:401px;
             text-align:center;
+            color:#ffffff;
         }
         .playerWrap {
             margin:0 0 0 auto;
@@ -97,9 +108,43 @@ img[usemap], map area{
                 margin:41px 0 0 0;
             }
 
-.bottomRight {
-    position:absolute;
-    right:2px;
-    bottom:2px;
-    text-align:right;
+
+@media screen and (max-width: 986px) {
+    .columnLeft {
+        float:none;
+        width:100%;
+        text-align:center;
+    }
+        .albumCover {
+            padding-top:30px;
+        }
+        .nav {
+            margin:0 auto;
+        }
+
+    .columnRight {
+        float:none;
+        width:100%;
+        text-align:center;
+    }
+        .playerDirections {
+            padding-top:10px;
+        }
+        .playerWrap {
+            margin:0 auto;
+        }
+
+    .fotorama__wrap {
+        margin: 0 auto;
+    }
+
+    div.musicVideos {
+       padding-top:30px;
+       width:100%;
+       left:0;
+    }
+
+    div.notes, div.credits, div.libretto {
+        padding-top:30px;
+    }
 }

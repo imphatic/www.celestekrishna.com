@@ -10,29 +10,12 @@
 {% block content %}
 
 <div class="pagePreludered">
-    <div class="columnLeft">
-        <div class="columnLeftPage">
 
-            {% include "preludered/nav-prelude-red.html" %}
-
-        </div>
-
-        <div class="nav">
-            <img src="{% static 'img/nav.png' %}" usemap="#image-map">
-            <map name="image-map">
-                <area href="#" class="nav-prelude-red" coords="59,4,145,2,147,17,59,18" shape="poly">
-                <area href="#" class="nav-libretto" coords="35,19,94,25,95,35,35,29" shape="poly">
-                <area href="#" class="nav-notes" coords="118,23,167,21,167,31,121,35" shape="poly">
-                <area href="#" class="nav-credits" coords="9,33,63,42,63,51,5,45" shape="poly">
-                <area href="#" class="nav-music-videos" coords="90,41,195,32,200,44,89,52" shape="poly">
-            </map>
-        </div>
-
-    </div>
     <div class="columnRight">
 
         <div class="playerDirections">
-            <img src="{% static 'img/player-directions-whenpaused.png' %}">
+            Click circle to <span>Play</span><br>
+            Click song to select track.
         </div>
         <div class="playerWrap">
             <a href="javascript: player.pause();" class="playerCenterCircle"></a>
@@ -58,15 +41,22 @@
 
     </div>
 
-    <div class="bottomRight">
-        <a href="#">
-            <img src="{% static 'img/btm-right-buy-physical.png' %}">
-        </a>
-        <br>
-        <a href="https://songwhip.com/album/celeste-krishna/prelude-red">
-            <img src="{% static 'img/btm-right-stream.png' %}">
-        </a>
+    <div class="columnLeft">
+        <div class="columnLeftPage">
+
+            {% include "preludered/nav-prelude-red.html" %}
+
+        </div>
+
+        <div class="nav">
+            <a href="#" class="nav-prelude-red">Prelude Red</a><br>
+            <a href="#" class="nav-libretto">Libretto</a> * <a href="#" class="nav-notes">Notes</a><br>
+            <a href="#" class="nav-credits">Credits</a> * <a href="#" class="nav-music-videos">Music Videos</a><br>
+            <a href="#" class="buy-digital">Buy/Stream Digital</a> * <a href="#" class="buy-physical">Buy Physical</a>
+        </div>
+
     </div>
+
 
 </div>
 
