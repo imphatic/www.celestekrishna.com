@@ -35,21 +35,21 @@ nav.main ul {
             display:none;
         }
 
-
-.pageWorks {
-    margin:146px 0 0 180px;
+.page {
+    margin:100px 0 0 76px;
 }
 
-.pageLive {
-    margin:146px 0 0 264px;
-}
-    .bandsInTown {
-        max-width:800px;
-     }
-     .vids {
-        display:none;
-     }
+.bandsInTown {
+    max-width:800px;
+ }
+ .vids {
+    display:none;
+ }
 
-.pageConnect {
-    margin:95px 0 0 328px;
+
+@media screen and (max-width: 720px) {
+    .page {
+        margin-left:0;
+    }
 }
+
