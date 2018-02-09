@@ -1,10 +1,11 @@
 from django.shortcuts import render
 
 # Create your views here.
+def home(request):
+    return render(request, 'home/home.html')
 
 def works(request):
-    context = {'testing':'tested this thing'}
-    return render(request, 'home/works.html', context)
+    return render(request, 'home/works.html')
 
 def live(request):
     return render(request, 'home/live.html')

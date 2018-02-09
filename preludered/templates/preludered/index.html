@@ -49,10 +49,16 @@
         </div>
 
         <div class="nav">
-            <a href="#" class="nav-prelude-red">Prelude Red</a><br>
-            <a href="#" class="nav-libretto">Libretto</a> * <a href="#" class="nav-notes">Notes</a><br>
-            <a href="#" class="nav-credits">Credits</a> * <a href="#" class="nav-music-videos">Music Videos</a><br>
-            <a href="#" class="buy-digital">Buy/Stream Digital</a> * <a href="#" class="buy-physical">Buy Physical</a>
+            <img src="{% static 'img/nav.png' %}" usemap="#image-map">
+            <map name="image-map">
+                <area href="#" class="nav-prelude-red" coords="65,1,161,12" shape="rect">
+                <area href="#" class="nav-libretto" coords="49,14,109,29" shape="rect">
+                <area href="#" class="nav-notes" coords="126,18,173,28" shape="rect">
+                <area href="#" class="nav-credits" coords="24,34,78,46" shape="rect">
+                <area href="#" class="nav-music-videos" coords="96,33,199,45" shape="rect">
+                <area href="https://bit.ly/preludereddigital " target="_blank" class="digital-copy" coords="2,49,95,63" shape="rect">
+                <area href="https://bit.ly/preluderedalbum" target="_blank" class="signed-album" coords="115,50,220,63" shape="rect">
+            </map>
         </div>
 
     </div>
