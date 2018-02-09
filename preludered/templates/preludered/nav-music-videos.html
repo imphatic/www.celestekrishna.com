@@ -2,6 +2,7 @@
     <div class="fotorama"
              data-allowfullscreen="true"
              data-nav="false"
+             data-shuffle="true"
              data-width="560">
              {% for video in music_videos %}
                 <a href="{{ video.href }}" data-caption="{{ video.title }}"></a>

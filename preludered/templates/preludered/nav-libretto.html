@@ -1,9 +1,10 @@
 {% load static %}
 <div class="libretto">
     <div class="fotorama"
-         data-maxheight="523"
+         data-width="400"
          data-allowfullscreen="true"
          data-nav="false"
+         data-loop="true"
          data-startindex="{{ start_track }}">
         {% for track in music %}
         <img src="{% static track.image %}">

@@ -109,6 +109,13 @@ img[usemap], map area{
             }
 
 
+.fotorama {
+    overflow:inherit !important;
+}
+.fotorama__stage {
+    box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);
+}
+
 @media screen and (max-width: 986px) {
     .columnLeft {
         float:none;

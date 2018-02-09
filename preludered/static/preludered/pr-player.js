@@ -173,8 +173,8 @@ var player =
             this.circle.css('transform', 'rotate(' + rotation + 'deg)');
         }
 
-        // At 75% though the track, start loading the next one
-        if(Math.floor(percent * 100) > 74)
+        // At 10% though the track, start loading the next one
+        if(Math.floor(percent * 100) > 10)
         {
             this.loadNextTrack();
         }
@@ -198,7 +198,7 @@ var nav =
         },
         'libretto' : {
             'click' : function() {
-                nav.load_page('/preludered/nav/libretto/' + player.currentTrack);
+                nav.load_page('/preludered/nav/libretto/' + (player.currentTrack - 1));
             }
         },
         'notes' : {
