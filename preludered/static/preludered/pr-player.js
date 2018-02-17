@@ -106,7 +106,7 @@ var player =
 
     playNextTrack : function()
     {
-        this.stop();
+        //this.stop();
         this.play(this.getNextTrackNumber());
     },
 
