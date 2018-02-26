@@ -85,12 +85,12 @@ var player =
 
     pauseAnimations : function()
     {
-        $('.playerDirections span').html('Play');
+        $('.playerDirections img').attr('src', '/static/img/player-directions-whenpaused.png');
     },
 
     playAnimations : function ()
     {
-        $('.playerDirections span').html('Pause');
+        $('.playerDirections img').attr('src', '/static/img/player-directions-whenplaying.png');
     },
 
     stop : function()
