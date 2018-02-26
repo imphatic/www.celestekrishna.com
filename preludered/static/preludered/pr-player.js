@@ -227,12 +227,10 @@ var nav =
             }
         },
         'digital-copy' : {
-            'hover' : 'nav-digital-copy.png',
-            'click' : function() {}
+            'hover' : 'nav-digital-copy.png'
         },
         'signed-album' : {
-            'hover' : 'nav-signed-album.png',
-            'click' : function() {}
+            'hover' : 'nav-signed-album.png'
         }
     },
 
@@ -254,7 +252,9 @@ var nav =
                 });
 
                 // Create click listener
-                $('.nav-' + key).click(this.click(loc))
+                if(typeof this.click != 'undefined') {
+                    $('.nav-' + key).click(this.click(loc))
+                }
 
                 // Load hash requested location
                 var hash = window.location.hash.substr(1);
