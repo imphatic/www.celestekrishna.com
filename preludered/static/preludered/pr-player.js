@@ -200,7 +200,12 @@ var nav =
         'libretto' : {
             'hover' : 'nav-libretto.png',
             'click' : function() {
-                nav.load_page('/preludered/nav/libretto/' + (player.currentTrack - 1));
+                if(player.currentTrack > 9) {
+                    var cur = player.currentTrack - 2;
+                } else {
+                    var cur = player.currentTrack - 1;
+                }
+                nav.load_page('/preludered/nav/libretto/' + cur);
             }
         },
         'notes' : {
