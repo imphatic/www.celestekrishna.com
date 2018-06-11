@@ -28,12 +28,7 @@ def nav_libretto(request, track):
 
 def nav_notes(request):
     notes = Notes.objects.order_by('order')
-    data = {
-       'notes': notes,
-       'start_pos': random.randrange(notes.count() + 1)
-    }
-    return render(request, 'preludered/nav-notes.html', data)
-
+    return render(request, 'preludered/nav-notes.html', {'notes': notes})
 
 def nav_credits(request):
     credits = Credits.objects.order_by('order')

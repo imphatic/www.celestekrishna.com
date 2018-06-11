@@ -26,6 +26,7 @@ var player =
     playlist : [],
     lockAnimation : 0,
 
+
     init : function()
     {
         this.circle = $('#playerCircle');
@@ -185,6 +186,7 @@ var player =
           requestAnimationFrame(self.step.bind(self));
         }
     },
+
 };
 
 
@@ -225,6 +227,12 @@ var nav =
             'click' : function() {
                 nav.load_page('/preludered/nav/music-videos');
             }
+        },
+        'whats-in-prelude-red' : {
+            'hover' : 'nav-whats-in-prelude-red.png'
+        },
+        'bts' : {
+            'hover' : 'nav-bts.png'
         },
         'digital-copy' : {
             'hover' : 'nav-digital-copy.png'

@@ -26,7 +26,7 @@ nav.main ul {
         padding-right:25px;
     }
     nav.main ul li a:hover {
-        text-shadow: 2px 2px 2px rgba(21, 170, 172, 1);
+        text-shadow: -2px 1px 0px rgba(21, 170, 172, 1);
     }
     nav.main li.menu {
         position:relative;
@@ -58,4 +58,11 @@ nav.main ul {
         margin-left:0;
     }
 }
+
+/* 2.0 Edits - LS
+=======================*/
+
+.fotorama__arr, .fotorama__fullscreen-icon, .fotorama__video-close, .fotorama__video-play {background: url('../img/fotorama.png') no-repeat !important;}
+
+
 
