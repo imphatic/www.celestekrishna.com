@@ -110,7 +110,12 @@
 
             track = Math.floor((Math.random() * player.totalTracks) + 1);
                 player.positionCircle(track);
-            
+
+            {% if auto_play == 1 %}
+                player.play(track);
+            {% else %}
+                player.positionCircle(track);
+            {% endif %}
         });
         </script>
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
