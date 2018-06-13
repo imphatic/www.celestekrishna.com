@@ -62,11 +62,11 @@ nav.main ul {
 /* 2.0 Edits - LS
 =======================*/
 
-.fotorama__fullscreen-icon {background-position: 0 -32px !important}
-.fotorama--fullscreen .fotorama__fullscreen-icon {background-position: -32px -32px !important}
-.fotorama__arr--next {background-position: -32px 0 !important}
-.fotorama__video-play {background-position: 0 -64px !important}
-.fotorama__video-close {background-position: -64px 0 !important}
+.fotorama__wrap--css3 .fotorama__fullscreen-icon {background-position: 0 -32px !important}
+.fotorama__wrap--css3 .fotorama--fullscreen .fotorama__fullscreen-icon {background-position: -32px -32px !important}
+.fotorama__wrap--css3 .fotorama__arr--next {background-position: -32px 0 !important}
+.fotorama__wrap--css3 .fotorama__video-play {background-position: 0 -64px !important}
+.fotorama__wrap--css3 .fotorama__video-close {background-position: -64px 0 !important}
 .fotorama__arr, .fotorama__fullscreen-icon, .fotorama__video-close, .fotorama__video-play {background: url('../img/fotorama.png') no-repeat !important;}
 
 
