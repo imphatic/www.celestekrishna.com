@@ -118,22 +118,22 @@ img[usemap], map area{
 .fotorama {
     overflow:inherit !important;
 }
-.fotorama__stage .fotorama__stage__shaft {
+.fotorama__stage{
     /*
     box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);
     */
     filter: drop-shadow(-20px 20px 3px rgba(0,0,0,0.30));
 }
-.fotorama__stage .fotorama__arr, .fotorama__stage .fotorama__fullscreen-icon, .fotorama__stage .fotorama__video-close, .fotorama__stage .fotorama__video-play{
+.fotorama .fotorama__stage[role="button"]{
     filter:none !important;
 }
 .credits .fotorama__stage .fotorama__img, .notes .fotorama__stage .fotorama__img, .whatsinpreludered .fotorama__stage .fotorama__img {
     width: 400px !important;
     height: 400px !important
 }
-.fotorama__arr--prev {left: 9px !important}
-.fotorama__arr--next {right: 15px !important}
-.credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: -3px !important;right: 54px !important}
+.fotorama__arr--prev {left: -8px !important}
+.fotorama__arr--next {right: -2px !important}
+.credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: 4px !important;right: 43px !important}
 
 @media screen and (max-width: 986px) {
     .columnLeft {
