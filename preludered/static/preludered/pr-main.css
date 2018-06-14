@@ -17,20 +17,20 @@ img[usemap], map area{
 
     .columnLeft {
         float:left;
-        width:500px;
+        width:510px;
         position:relative;
         margin: 0 auto;
         text-align: center;
     }
         .nav {
             padding:40px 0 0 0;
-            width:100%;
+            width:98%;
             text-align:center;
             font-style:normal;
-            color:#ffffff;
+            color:#fff;
         }
             .nav a {
-                color:#ffffff;
+                color:#fff;
                 padding:0 5px;
             }
 
@@ -121,9 +121,12 @@ img[usemap], map area{
     */
     filter: drop-shadow(-20px 20px 3px rgba(0,0,0,0.30));
 }
+.fotorama__stage .fotorama__arr, .fotorama__stage .fotorama__fullscreen-icon, .fotorama__stage .fotorama__video-close, .fotorama__stage .fotorama__video-play{
+    filter:none !important;
+}
 .credits .fotorama__stage .fotorama__img, .notes .fotorama__stage .fotorama__img, .whatsinpreludered .fotorama__stage .fotorama__img {
-    width: 400px;
-    height: 400px
+    width: 400px !important;
+    height: 400px !important
 }
 
 
