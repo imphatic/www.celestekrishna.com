@@ -11,18 +11,20 @@ img[usemap], map area{
 }
 
 .pagePreludered {
-    max-width:935px;
+    max-width:980px;
     margin:0 auto;
 }
 
     .columnLeft {
         float:left;
-        width:467px;
+        width:500px;
         position:relative;
+        margin: 0 auto;
+        text-align: center;
     }
         .nav {
             padding:40px 0 0 0;
-            width:402px;
+            width:100%;
             text-align:center;
             font-style:normal;
             color:#ffffff;
@@ -65,26 +67,27 @@ img[usemap], map area{
     .columnRight {
         float:right;
         width:467px;
-        text-align:right;
+        text-align:center;
+        margin: 0 auto
     }
         .playerDirections {
             display:inline-block;
             padding:93px 0 0 0;
             height:48px;
-            width:401px;
+            width:100%;
             text-align:center;
-            color:#ffffff;
+            color:#fff;
         }
         .playerWrap {
-            margin:0 0 0 auto;
+            margin:0 auto;
             background:url('../img/player-bg.jpg');
-            width:401px;
+            width:400px;
             height:400px;
             text-align:center;
             position:relative;
-            -webkit-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);
-            -moz-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);
-            box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);
+            -webkit-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.30);
+            -moz-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.30);
+            box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.30);
         }
             .playerCenterCircle {
                 position:absolute;
@@ -116,8 +119,14 @@ img[usemap], map area{
     /*
     box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);
     */
-    filter: drop-shadow(-19px 19px 3px rgba(0,0,0,0.28));
+    filter: drop-shadow(-20px 20px 3px rgba(0,0,0,0.30));
 }
+.credits .fotorama__stage .fotorama__img, .notes .fotorama__stage .fotorama__img, .whatsinpreludered .fotorama__stage .fotorama__img {
+    width: 400px;
+    height: 400px
+}
+
+
 
 @media screen and (max-width: 986px) {
     .columnLeft {
