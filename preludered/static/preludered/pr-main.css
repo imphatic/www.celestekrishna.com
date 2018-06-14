@@ -25,10 +25,11 @@ img[usemap], map area{
         .nav {
             padding:40px 0 0 0;
             width:100%;
-            max-width: 504px;
+            max-width: 400px;
             text-align:center;
             font-style:normal;
             color:#fff;
+            margin: 0 auto
         }
             .nav a {
                 color:#fff;
@@ -59,10 +60,10 @@ img[usemap], map area{
         }
 
         .musicVideos {
-            padding:137px 0 0 0;
+            padding:142px 0 0 0;
             width:560px;
             position:relative;
-            left:-93px;
+            left:-87px;
         }
 
     .columnRight {
@@ -73,7 +74,7 @@ img[usemap], map area{
     }
         .playerDirections {
             display:inline-block;
-            padding:93px 0 0 0;
+            padding:94px 0 0 0;
             height:48px;
             width:100%;
             text-align:center;
@@ -124,7 +125,7 @@ img[usemap], map area{
     */
     filter: drop-shadow(-20px 20px 3px rgba(0,0,0,0.30));
 }
-.fotorama .fotorama__stage[role="button"]{
+.fotorama .fotorama__stage .fotorama__arr, .fotorama .fotorama__stage .fotorama__fullscreen-icon, .fotorama .fotorama__stage .fotorama__video-close, .fotorama .fotorama__stage .fotorama__video-play{
     filter:none !important;
 }
 .credits .fotorama__stage .fotorama__img, .notes .fotorama__stage .fotorama__img, .whatsinpreludered .fotorama__stage .fotorama__img {
@@ -133,7 +134,7 @@ img[usemap], map area{
 }
 .fotorama__arr--prev {left: -8px !important}
 .fotorama__arr--next {right: -2px !important}
-.credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: 4px !important;right: 43px !important}
+.credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: -4px !important;right: 35px !important}
 
 @media screen and (max-width: 986px) {
     .columnLeft {
