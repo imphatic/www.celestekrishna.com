@@ -17,14 +17,15 @@ img[usemap], map area{
 
     .columnLeft {
         float:left;
-        width:510px;
+        width:473px;
         position:relative;
         margin: 0 auto;
         text-align: center;
     }
         .nav {
             padding:40px 0 0 0;
-            width:98%;
+            width:100%;
+            max-width: 504px;
             text-align:center;
             font-style:normal;
             color:#fff;
@@ -66,7 +67,7 @@ img[usemap], map area{
 
     .columnRight {
         float:right;
-        width:467px;
+        width:444px;
         text-align:center;
         margin: 0 auto
     }
@@ -112,10 +113,12 @@ img[usemap], map area{
             }
 
 
+/*Fotorama Edits*/
+
 .fotorama {
     overflow:inherit !important;
 }
-.fotorama__stage {
+.fotorama__stage .fotorama__stage__shaft {
     /*
     box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);
     */
@@ -128,8 +131,9 @@ img[usemap], map area{
     width: 400px !important;
     height: 400px !important
 }
-
-
+.fotorama__arr--prev {left: 9px !important}
+.fotorama__arr--next {right: 15px !important}
+.credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: -3px !important;right: 54px !important}
 
 @media screen and (max-width: 986px) {
     .columnLeft {
