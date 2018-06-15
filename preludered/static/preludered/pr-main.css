@@ -121,12 +121,17 @@ img[usemap], map area{
 .fotorama {
     overflow:inherit !important;
 }
-.libretto .fotorama__stage, .musicVideos .fotorama__stage {
+.libretto .fotorama__stage {
+    width: 473px !important;height: 598px !important;
+}
+.libretto .fotorama__stage__shaft {
     filter: drop-shadow(-20px 20px 3px rgba(0,0,0,0.30));
 }
-.credits .fotorama__stage:before, .credits .fotorama__stage__shaft, 
-.notes .fotorama__stage:before, .notes .fotorama__stage__shaft,
-.whatsinpreludered .fotorama__stage:before, .whatsinpreludered .fotorama__stage__shaft{
+.libretto .nav {padding: 24px 0 0 0}
+.musicVideos .fotorama__stage {
+    filter: drop-shadow(-20px 20px 3px rgba(0,0,0,0.30));
+}
+.credits .fotorama__stage__shaft, .notes .fotorama__stage__shaft, .whatsinpreludered .fotorama__stage__shaft{
     /*
     box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);
     */
@@ -134,17 +139,18 @@ img[usemap], map area{
 }
 .credits .fotorama__stage .fotorama__img, .notes .fotorama__stage .fotorama__img, .whatsinpreludered .fotorama__stage .fotorama__img {
     width: 400px !important;
-    height: 400px !important
+    height: 400px !important;
+    margin: 0 20px 0 12px !important
 }
-.libretto .fotorama__stage .fotorama__img, .libretto .fotorama__stage__shaft {
-    width: 435px !important
-}
+.libretto .fotorama__stage .fotorama__img, .libretto .fotorama__stage__shaft {margin: 0 auto !important}
 .fotorama__arr--prev {left: -8px !important}
 .fotorama__arr--next {right: -2px !important}
+.musicVideos .fotorama__arr--prev {left: 5px !important}
+.musicVideos .fotorama__arr--next {right: 5px !important}
 .credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: -4px !important;right: 32px !important}
 .libretto .fotorama__fullscreen-icon {top: 9px!important;right: 34px !important;}
 .libretto .fotorama__wrap.fotorama__wrap--css3 {margin: 0 auto}
-
+.credits .nav, .notes .nav, .whatsinpreludered .nav {padding: 15px 0 0}
 
 @media screen and (max-width: 986px) {
     .columnLeft {
