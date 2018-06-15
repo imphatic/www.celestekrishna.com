@@ -127,7 +127,6 @@ img[usemap], map area{
 .libretto .fotorama__stage__shaft {
     filter: drop-shadow(-20px 20px 3px rgba(0,0,0,0.30));
 }
-.libretto .nav {padding: 24px 0 0 0}
 .musicVideos .fotorama__stage {
     filter: drop-shadow(-20px 20px 3px rgba(0,0,0,0.30));
 }
@@ -142,6 +141,7 @@ img[usemap], map area{
     height: 400px !important;
     margin: 0 20px 0 12px !important
 }
+.libretto .fotorama__stage .fotorama__img {width: 435px !important}
 .libretto .fotorama__stage .fotorama__img, .libretto .fotorama__stage__shaft {margin: 0 auto !important}
 .fotorama__arr--prev {left: -8px !important}
 .fotorama__arr--next {right: -2px !important}
@@ -150,7 +150,7 @@ img[usemap], map area{
 .credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: -4px !important;right: 32px !important}
 .libretto .fotorama__fullscreen-icon {top: 9px!important;right: 34px !important;}
 .libretto .fotorama__wrap.fotorama__wrap--css3 {margin: 0 auto}
-.credits .nav, .notes .nav, .whatsinpreludered .nav {padding: 15px 0 0}
+
 
 @media screen and (max-width: 986px) {
     .columnLeft {
