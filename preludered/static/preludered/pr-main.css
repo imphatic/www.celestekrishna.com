@@ -23,7 +23,7 @@ img[usemap], map area{
         text-align: center;
     }
         .nav {
-            padding:40px 0 0 0;
+            padding:40px 0;
             width:100%;
             max-width: 400px;
             text-align:center;
@@ -40,9 +40,6 @@ img[usemap], map area{
                 color:#ca1520;
             }
 
-        .albumCover {
-            padding:142px 0 0 0;
-        }
             .albumCover img.cover {
                 -webkit-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.30);
                 -moz-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.30);
@@ -50,23 +47,18 @@ img[usemap], map area{
                 width: 400px !important;
                 height: 400px !important;
             }
-        .libretto {
-            padding:89px 0 0 0;
-        }
-        .notes {
-            padding:142px 0 0 0;
-        }
 
-        .credits {
-            padding:142px 0 0 0;
-        }
-
-        .musicVideos {
-            padding:142px 0 0 0;
-            width:535px;
-            position:relative;
-            left:-62px;
-        }
+            .libretto {
+                padding-top:89px;
+            }
+            .notes, .credits, .albumCover, .musicVideos, .whatsinpreludered   {
+                padding:142px 0 0;
+            }
+            .musicVideos {
+                width:535px;
+                position:relative;
+                left:-62px;
+            }
 
     .columnRight {
         float:right;
@@ -132,7 +124,7 @@ img[usemap], map area{
     */
     filter: drop-shadow(-20px 20px 3px rgba(0,0,0,0.30));
 }
-.musicVideos .fotorama__stage {
+.musicVideos .fotorama__stage__shaft {
     filter: drop-shadow(-20px 20px 3px rgba(0,0,0,0.30));
 }
     .musicVideos .fotorama__arr--prev {left: 5px !important}
@@ -149,6 +141,8 @@ img[usemap], map area{
 
     .credits .fotorama__stage .fotorama__img, .notes .fotorama__stage .fotorama__img, .whatsinpreludered .fotorama__stage .fotorama__img {width: 400px !important;height: 400px !important;margin: 0 20px 0 12px !important}
         .credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: -4px !important;right: 32px !important}
+
+    .musicVideos .fotorama__stage .fotorama__img {width: 535px !important;height: 400px !important;margin: 0 20px 0 12px !important}
 }
 @media screen and (max-width: 986px) {
     .columnLeft {
@@ -185,7 +179,7 @@ img[usemap], map area{
        left:0;
     }
 
-    div.notes, div.credits, div.libretto {
+    div.notes, div.credits, div.libretto, .div.whatsinpreludered {
         padding-top:30px;
     }
 

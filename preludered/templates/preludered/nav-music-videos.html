@@ -3,7 +3,7 @@
              data-allowfullscreen="true"
              data-nav="false"
              data-shuffle="true"
-             data-width="535"
+             data-width="565"
              data-arrows="true"
              data-loop="true">
              {% for video in music_videos %}
@@ -25,17 +25,21 @@
         top: 0;
         width: 100%;
         text-align: center;
-        height:52px;
+        height: 40px
     }
     div.fotorama__caption__wrap {
         background:none;
         color:#fff;
         font-family: 'Libre Baskerville', serif;
-        font-style: normal;
-        font-size: 20px;
-        line-height: 2.5;
+        font-style: italic;
         padding: 0;
+        font-size: 15px;
+        line-height: 40px
     }
-    .nav {margin-left: 6px;
+    @media screen and (min-width: 987px) { 
+        .nav {margin-left: 6px}
+        div.fotorama__caption__wrap {font-size: 15px;line-height: 50px}
+        div.fotorama__caption {height:50px}
     }
+
 </style>
