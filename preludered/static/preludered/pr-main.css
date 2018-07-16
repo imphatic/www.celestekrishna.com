@@ -142,7 +142,7 @@ img[usemap], map area{
     .credits .fotorama__stage .fotorama__img, .notes .fotorama__stage .fotorama__img, .whatsinpreludered .fotorama__stage .fotorama__img {width: 400px !important;height: 400px !important;margin: 0 20px 0 12px !important}
         .credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: -4px !important;right: 32px !important}
 
-    .musicVideos .fotorama__stage .fotorama__img {width: 535px !important;height: 400px !important;margin: 0 20px 0 40px !important}
+    .musicVideos .fotorama__stage .fotorama__img, .musicVideos .fotorama__stage .fotorama__video {width: 535px !important;height: 400px !important;margin: 0 20px 0 40px !important}
 }
 @media screen and (max-width: 986px) {
     .columnLeft {
