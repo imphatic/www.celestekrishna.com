@@ -55,6 +55,7 @@ img[usemap], map area{
                 padding:142px 0 0;
             }
             .musicVideos {
+                width:575px;
                 position:relative;
                 left:-62px;
             }
@@ -118,7 +119,7 @@ img[usemap], map area{
     .libretto .fotorama__wrap.fotorama__wrap--css3 {margin: 0 auto}
 
 .credits .fotorama__stage__shaft, .notes .fotorama__stage__shaft, .whatsinpreludered .fotorama__stage__shaft{
-    /*box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);*/
+    /* box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);*/
     filter: drop-shadow(-20px 20px 3px rgba(0,0,0,0.30));
 }
 .musicVideos .fotorama__stage__shaft {
