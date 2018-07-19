@@ -136,7 +136,7 @@ img[usemap], map area{
 .fotorama__arr--next {right: -2px !important}
 
 @media screen and (min-width: 987px) {
-    .libretto .fotorama__stage {width: 473px !important;height: 598px !important}
+    .libretto .fotorama__stage {width: 473px !important;height: 655px !important}
         .libretto .fotorama__stage .fotorama__img {width: 435px !important}
         .libretto .fotorama__fullscreen-icon {top: 18px!important;right: 42px !important}
 
