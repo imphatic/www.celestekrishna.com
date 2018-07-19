@@ -131,7 +131,7 @@ img[usemap], map area{
 
 @media screen and (min-width: 987px) {
     .libretto {padding-top: 55px}
-    .libretto .fotorama__stage {width: 473px !important;height: 610px !important}
+    .libretto .fotorama__stage {width: 473px !important;height: 620px !important}
         .libretto .fotorama__stage .fotorama__img {width: 435px !important}
         .libretto .fotorama__fullscreen-icon {top: 18px!important;right: 42px !important}
 
@@ -184,7 +184,8 @@ img[usemap], map area{
         height: auto !important
     }
     .libretto .fotorama__stage {
-
+        width: 550px;
+        height: 570px
     }
 
 }
