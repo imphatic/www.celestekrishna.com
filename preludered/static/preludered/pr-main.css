@@ -35,21 +35,15 @@ img[usemap], map area{
                 color:#fff;
                 padding:0 5px;
             }
-
             .nav a:hover {
                 color:#ca1520;
             }
-
             .albumCover img.cover {
                 -webkit-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.30);
                 -moz-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.30);
                 box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.30);
                 width: 400px !important;
                 height: 400px !important;
-            }
-
-            .libretto {
-                padding-top:89px;
             }
             .notes, .credits, .albumCover, .musicVideos, .whatsinpreludered   {
                 padding:142px 0 0;
@@ -136,7 +130,8 @@ img[usemap], map area{
 .fotorama__arr--next {right: -2px !important}
 
 @media screen and (min-width: 987px) {
-    .libretto .fotorama__stage {width: 473px !important;height: 655px !important}
+    .libretto {padding-top: 55px}
+    .libretto .fotorama__stage {width: 473px !important;height: 610px !important}
         .libretto .fotorama__stage .fotorama__img {width: 435px !important}
         .libretto .fotorama__fullscreen-icon {top: 18px!important;right: 42px !important}
 
@@ -181,8 +176,15 @@ img[usemap], map area{
        left:0;
     }
 
-    div.notes, div.credits, div.libretto, .div.whatsinpreludered {
+    div.notes, div.credits, div.libretto, div.whatsinpreludered {
         padding-top:30px;
+    }
+    div.libretto .fotorama__stage__frame img{
+        width: 430px !important;
+        height: auto !important
+    }
+    .libretto .fotorama__stage {
+
     }
 
 }
