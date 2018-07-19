@@ -174,18 +174,61 @@ img[usemap], map area{
        padding-top:30px;
        width:100%;
        left:0;
+       height: auto
     }
 
     div.notes, div.credits, div.libretto, div.whatsinpreludered {
         padding-top:30px;
     }
+    div.notes .fotorama__stage__frame img, div.credits .fotorama__stage__frame img {
+        width: 100% !important;
+        height: auto;
+        max-width: 400px !important;
+        max-height: 400px !important
+    }
+}
+
+@media screen and (min-width: 431px) and (max-width: 986px){
     div.libretto .fotorama__stage__frame img{
         width: 430px !important;
         height: auto !important
     }
     .libretto .fotorama__stage {
-        width: 550px;
-        height: 570px
+        width: 550px !important;
+        height: 570px !important
     }
+    .musicVideos .fotorama__stage .fotorama__img{
+        width: 535px !important;
+        height: 400px !important;
+    }
+    .musicVideos .fotorama__stage .fotorama__video {
+        top: 0;
+        width: 535px !important;
+        height: 400px !important;
+        margin: 0 auto !important
+    }
+}
 
+@media screen and (max-width: 430px){
+    div.libretto .fotorama__stage__frame img{
+        width: 100% !important;
+        height: auto !important
+    }
+    .libretto .fotorama__stage {
+        width: 100% !important;
+        height: 480px !important
+    }
+    .musicVideos .fotorama__stage .fotorama__img{
+        width: 100% !important;
+        height: auto !important;
+    }
+    .musicVideos .fotorama__stage .fotorama__video {
+        top: 0;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important
+    }
+    .musicVideos .fotorama__stage {
+        
+    }
 }
