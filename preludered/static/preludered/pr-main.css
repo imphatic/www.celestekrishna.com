@@ -138,7 +138,7 @@ img[usemap], map area{
     .credits .fotorama__stage .fotorama__img, .notes .fotorama__stage .fotorama__img, .whatsinpreludered .fotorama__stage .fotorama__img {width: 400px !important;height: 400px !important;margin: 0 20px 0 12px !important}
         .credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: -4px !important;right: 32px !important}
 
-    .musicVideos .fotorama__stage .fotorama__img{width: 535px !important;height: 400px !important;margin: 0 20px 0 20px !important}
+    .musicVideos .fotorama__stage .fotorama__img{width: 535px !important;height: 400px !important;margin: 0 20px !important}
     .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 535px !important;height: 400px !important;margin: 0 auto !important}
 }
 @media screen and (max-width: 986px) {
@@ -186,6 +186,9 @@ img[usemap], map area{
         max-width: 400px !important;
         max-height: 400px !important
     }
+    .libretto .fotorama__stage__shaft {
+        width: inherit !important;
+    }
 }
 
 @media screen and (min-width: 431px) and (max-width: 986px){
@@ -195,11 +198,15 @@ img[usemap], map area{
     }
     .libretto .fotorama__stage {
         width: 550px !important;
-        height: 570px !important
+        height: 570px !important;
+        margin: 0 auto !important
     }
-    .musicVideos .fotorama__stage .fotorama__img{
+}
+@media screen and (min-width: 535px)and (max-width: 986px){
+      .musicVideos .fotorama__stage .fotorama__img{
         width: 535px !important;
         height: 400px !important;
+        margin: 0 20px !important
     }
     .musicVideos .fotorama__stage .fotorama__video {
         top: 0;
@@ -208,16 +215,7 @@ img[usemap], map area{
         margin: 0 auto !important
     }
 }
-
-@media screen and (max-width: 430px){
-    div.libretto .fotorama__stage__frame img{
-        width: 100% !important;
-        height: auto !important
-    }
-    .libretto .fotorama__stage {
-        width: 100% !important;
-        height: 480px !important
-    }
+@media screen and (max-width: 534px){
     .musicVideos .fotorama__stage .fotorama__img{
         width: 100% !important;
         height: auto !important;
@@ -229,6 +227,18 @@ img[usemap], map area{
         margin: 0 auto !important
     }
     .musicVideos .fotorama__stage {
-        
+        width: 100% !important;
+        height: 400px !important
+    }
+}
+@media screen and (max-width: 430px){
+    div.libretto .fotorama__stage__frame img{
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important
+    }
+    .libretto .fotorama__stage {
+        width: 100% !important;
+        height: 480px !important
     }
 }
