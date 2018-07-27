@@ -35,10 +35,6 @@ def nav_credits(request):
     return render(request, 'preludered/nav-credits.html', {'credits': credits})
 
 
-def nav_music_videos(request, track):
+def nav_music_videos(request):
     music_videos = MusicVideos.objects.order_by('order')
-    videodata = {
-        'music_videos': music_videos,
-        'there_track' : track
-    }
-    return render(request, 'preludered/nav-music-videos.html', videodata)
+    return render(request, 'preludered/nav-music-videos.html', {'music_videos': music_videos})
