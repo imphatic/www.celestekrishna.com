@@ -57,6 +57,12 @@ $('#playerMap area').on('click', function(e){
             break;
     }
 });
+
+if(player.playlist[player.currentTrack] != fotoramaConf.activeIndex)
+{
+    fotoramaConf.show('>');
+}
+
 </script>
 <style type="text/css">
     .nav {padding: 10px 0 0}
