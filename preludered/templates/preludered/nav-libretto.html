@@ -11,7 +11,52 @@
     </div>
 </div>
 <script type="text/javascript">
-$('.fotorama').fotorama();
+var fotorama = $('.fotorama').fotorama();
+var fotoramaConf = fotorama.data('fotorama');
+
+$('#playerMap area').on('click', function(e){
+    switch ($(this).attr('id')){
+        case 'player0' :
+            fotoramaConf.show(0);
+            break;
+        case 'player1' :
+            fotoramaConf.show(1);
+            break;
+        case 'player2' :
+            fotoramaConf.show(2);
+            break;
+        case 'player3' :
+            fotoramaConf.show(3);
+            break;
+        case 'player4' :
+            fotoramaConf.show(4);
+            break;
+        case 'player5' :
+            fotoramaConf.show(5);
+            break;
+        case 'player6' :
+            fotoramaConf.show(6);
+            break;
+        case 'player7' :
+            fotoramaConf.show(7);
+            break;
+        case 'player8' :
+            fotoramaConf.show(8);
+            break;
+        case 'player9' :
+            fotoramaConf.show(8);
+            break;
+        case 'player10' :
+            fotoramaConf.show(9);
+            break;
+        case 'player11' :
+            fotoramaConf.show(10);
+            break;
+        case 'player12' :
+            fotoramaConf.show(11);
+            break;
+    }
+});
 </script>
 <style type="text/css">
     .nav {padding: 10px 0 0}
