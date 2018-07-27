@@ -58,7 +58,8 @@ $('#playerMap area').on('click', function(e){
     }
 });
 
-if (player.playNextTrack()) {
+if(player.play(player.getNextTrackNumber()))
+{
     var moveactive = fotoramaConf.activeIndex + 1;
     fotoramaConf.show(moveactive);
 }
