@@ -13,6 +13,7 @@
 <script type="text/javascript">
 var fotorama = $('.fotorama').fotorama();
 var fotoramaConf = fotorama.data('fotorama');
+fotoramaConf.activeIndex(track);
 
 $('#playerMap area').on('click', function(e){
     switch ($(this).attr('id')){
@@ -57,11 +58,6 @@ $('#playerMap area').on('click', function(e){
             break;
     }
 });
-
-//if(player.playlist[player.currentTrack] != fotoramaConf.activeIndex)
-//{
-    //fotoramaConf.show('>');
-//}
 
 </script>
 <style type="text/css">
