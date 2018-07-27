@@ -2,7 +2,6 @@
     <div class="fotorama"
              data-allowfullscreen="true"
              data-nav="false"
-             data-shuffle="true"
              data-width="610"
              data-maxheight="430"
              data-arrows="true"
@@ -14,11 +13,23 @@
 </div>
 
 <script type="text/javascript">
-    $('.fotorama').fotorama().on('fotorama:loadvideo', function() {
-        if(player.playlist[player.currentTrack].playing())
-        {
-            player.pause();
-        }
+    $(function () {
+        $('.fotorama').on('fotorama:loadvideo', function (e, fotorama, extra) 
+            {
+                if(player.playlist[player.currentTrack].playing())
+                {
+                    player.pause();
+                }
+                if(track == 11){
+                    fotorama.show(9);
+                }
+                else if (track == 5){
+                    fotorama.show(4);
+                }
+                else {
+                    fotorama.shuffle();
+                }
+        }).fotorama();
     });
 </script>
 <style type="text/css">
