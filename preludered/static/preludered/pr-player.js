@@ -175,8 +175,8 @@ var player =
             this.circle.css('transform', 'rotate(' + rotation + 'deg)');
         }
 
-        // At 10% though the track, start loading the next one
-        if(Math.floor(percent * 100) > 10)
+        // At 1% though the track, start loading other tracks
+        if(Math.floor(percent * 100) > 1)
         {
             this.loadNextTrack();
         }
