@@ -31,6 +31,7 @@ var player =
     {
         this.circle = $('#playerCircle');
         this.rotationSpaceBetweenTracks = (360/this.totalTracks) * -1;
+
     },
 
     play : function(track)
@@ -119,6 +120,17 @@ var player =
         }
     },
 
+    loadAllTrack : function()
+    {
+        for (var i = 1; i <= 13; i++)
+        {
+            if(!this.playlist[i])
+            {
+                this.loadTrack(i);
+            }
+        }
+    },
+
     positionCircle : function(track)
     {
         if(this.lockAnimation) return;
@@ -175,12 +187,15 @@ var player =
             this.circle.css('transform', 'rotate(' + rotation + 'deg)');
         }
 
-        // At 1% though the track, start loading other tracks
-        if(Math.floor(percent * 100) > 1)
+        // At 0.1% through the track, start loading next track
+        if(Math.floor(percent * 100) > 0.1)
         {
             this.loadNextTrack();
         }
-
+        
+        // We are loading the rest of the tracks to minimize gapless playback 
+        this.loadAllTrack();
+        
         // If the song is still playing, continue stepping.
         if (currentTrack.playing())
         {

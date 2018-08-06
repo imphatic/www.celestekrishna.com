@@ -9,6 +9,7 @@ body.preludered {
 img[usemap], map area{
     outline: none;
 }
+map area {cursor: pointer}
 
 .pagePreludered {
     max-width:980px;
