@@ -158,7 +158,7 @@ var player =
     {
         this.playlist[track] = new Howl({
             src : ['/static/preludered/music/' + track + '.mp3'],
-            //html5 : true,
+            html5 : true,
             onplay: function() {
                 requestAnimationFrame(player.step.bind(player));
             },
@@ -199,8 +199,13 @@ var player =
           requestAnimationFrame(self.step.bind(self));
         }
 
-        // We are loading the rest of the tracks to minimize gapless playback 
-        this.loadAllTrack();
+        if ($(window).width() >= 1024){  
+            // We are loading the rest of the tracks to minimize gapless playback on desktop browsers only
+            this.loadAllTrack();
+        }  else {
+            // Do not load all tracks in mobile devices. IOS can't load track asyncronously.  
+            this.loadNextTrack();
+        }     
     },
 
 };
