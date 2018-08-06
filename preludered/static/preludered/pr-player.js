@@ -26,12 +26,10 @@ var player =
     playlist : [],
     lockAnimation : 0,
 
-
     init : function()
     {
         this.circle = $('#playerCircle');
         this.rotationSpaceBetweenTracks = (360/this.totalTracks) * -1;
-
     },
 
     play : function(track)
@@ -153,6 +151,7 @@ var player =
         this.currentTrackStartingRotation = moveTo;
 
         this.currentTrack = track;
+
     },
 
     loadTrack : function(track)
@@ -169,6 +168,7 @@ var player =
         });
 
         return this.playlist[track];
+
     },
 
     step: function() {
@@ -192,15 +192,14 @@ var player =
         {
             this.loadNextTrack();
         }
-        
-        // We are loading the rest of the tracks to minimize gapless playback 
-        this.loadAllTrack();
-        
+
         // If the song is still playing, continue stepping.
         if (currentTrack.playing())
         {
           requestAnimationFrame(self.step.bind(self));
         }
+        // We are loading the rest of the tracks to minimize gapless playback 
+        this.loadAllTrack();
     },
 
 };
