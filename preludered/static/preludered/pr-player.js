@@ -158,7 +158,7 @@ var player =
     {
         this.playlist[track] = new Howl({
             src : ['/static/preludered/music/' + track + '.mp3'],
-            html5 : true,
+            //html5 : true,
             onplay: function() {
                 requestAnimationFrame(player.step.bind(player));
             },
@@ -198,6 +198,7 @@ var player =
         {
           requestAnimationFrame(self.step.bind(self));
         }
+
         // We are loading the rest of the tracks to minimize gapless playback 
         this.loadAllTrack();
     },
