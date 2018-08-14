@@ -158,13 +158,18 @@ var player =
     {
         this.playlist[track] = new Howl({
             src : ['/static/preludered/music/' + track + '.mp3'],
-            html5 : false,
+            html5 : true,
             onplay: function() {
                 requestAnimationFrame(player.step.bind(player));
             },
             onend: function() {
                 player.playNextTrack();
-            }
+            },
+            onplayerror: function(){
+                player.once('unlock', function(){
+                    player.play();
+                });
+            },
         });
 
         return this.playlist[track];
