@@ -202,10 +202,7 @@ var player =
         if ($(window).width() >= 1024){  
             // We are loading the rest of the tracks to minimize gapless playback on desktop browsers only
             this.loadAllTrack();
-        }  else {
-            // Do not load all tracks in mobile devices. IOS can't load track asyncronously.  
-            this.loadNextTrack();
-        }     
+        }  
     },
 
 };

@@ -133,7 +133,7 @@
               $('map').after('<div class="map-touch-fix" style="position:absolute;top:0;left:0;width:100%;height:100%;">');
               $('.map-touch-fix').click(function(event){
                 $(this).hide();
-                $(document.elementFromPoint(event.clientX,event.clienY)).trigger('click');
+                $(document.elementFromPoint(event.clientX,event.clientY)).trigger('click');
                 $(this).show();
               });
             }
