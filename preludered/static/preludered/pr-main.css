@@ -55,7 +55,7 @@ map area {
 }
 
 .pagePreludered {
-    max-width:1024px;
+    max-width:1000px;
     margin:0 auto;
     text-align: center;
     padding: 3em;
@@ -195,6 +195,9 @@ map area {
     .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 535px !important;height: 400px !important;margin: 0 auto !important}
 }
 
+@media screen and (min-width: 1000px){
+    .albumCover {height: 425px !important}
+}
 @media screen and (max-width: 999px){
     .columnLeft, .columnRight {
         width: 100%;
@@ -218,6 +221,10 @@ map area {
     }
     .playerDirections {padding:  25px 0 15px}
 }
+@media screen and (max-width: 599px){
+
+}
+
 @media screen and (max-width: 1024px) {
     .pagePreludered {
         padding: 2em 1em
@@ -238,9 +245,6 @@ map area {
        height: auto
     }
 
-    div.notes, div.credits, div.libretto, div.whatsinpreludered {
-        padding-top:30px;
-    }
     div.notes .fotorama__stage__frame img, div.credits .fotorama__stage__frame img {
         width: 100% !important;
         height: auto;
