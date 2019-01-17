@@ -31,7 +31,7 @@ $(document).ready(function() {
              //areaElement[e].addEventListener("click", function(){ 
                // document.getElementById('playerCircle').src = mapHoverImg[this.id.split('player')[1]];
               //});
-             areaElement[e].onmouseleave = function() {
+             areaElement[e].onmouseout = function() {
               document.getElementById('playerCircle').src = '/static/img/player-circle.png';
              }
          }
