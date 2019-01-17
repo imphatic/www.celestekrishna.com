@@ -198,15 +198,14 @@ map area {
 }
 .credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: -4px !important;right: 32px !important}
 .credits .fotorama__stage .fotorama__img, .notes .fotorama__stage .fotorama__img, .whatsinpreludered .fotorama__stage .fotorama__img {width: 400px !important;height: 400px !important;margin: 0 20px 0 12px !important}
-   
+.libretto .fotorama__fullscreen-icon {top: 6px !important;right: 44px !important} 
 @media screen and (min-width: 1000px){
     .albumCover {height: 425px !important}
 
     .libretto .fotorama__stage {width: 480px !important;height: 550px !important}
         .libretto .fotorama__stage .fotorama__img {width: 400px !important;height: 500px !important;left: 0 !important}
-        .libretto .fotorama__fullscreen-icon {top: 18px!important;right: 42px !important}
-
 }
+
 @media screen and (max-width: 999px){
     .columnLeft, .columnRight {
         width: 100%;
