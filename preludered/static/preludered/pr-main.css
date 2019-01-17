@@ -179,24 +179,33 @@ map area {
     .musicVideos .fotorama__stage .fotorama__img{width: 535px !important;height: 400px !important;margin: 0 20px !important}
     .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 535px !important;height: 400px !important;margin: 0 auto !important}
 }
+@media screen and (max-width: 1199px){
+.musicVideos {width: 100%;position: relative;height: auto;}
+    .musicVideos .fotorama__stage .fotorama__img{width: 400px !important;height: 300px !important;margin: 0 20px !important}
+    .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 400px !important;height: 300px !important;margin: 0 auto !important}
+}
 @media screen and (min-width: 1000px) and (max-width: 1199px){
     /*.libretto .fotorama__stage {width: 473px !important;height: 620px !important}
         .libretto .fotorama__stage .fotorama__img {width: 435px !important}
         .libretto .fotorama__fullscreen-icon {top: 18px!important;right: 42px !important}*/
-    .musicVideos {width: 610px;position: relative;left: -130px;height: 430px}
-    .musicVideos .fotorama__stage .fotorama__img{width: 535px !important;height: 400px !important;margin: 0 20px !important}
-    .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 535px !important;height: 400px !important;margin: 0 auto !important}
 
-    .libretto .fotorama__stage .fotorama__img {width: 375px !important;height: 475px !important}
-    .libretto .fotorama__stage {width: 475px !important;height: 625px !important}
+   /* .musicVideos {width: 610px;position: relative;left: -130px;height: 430px}
+    .musicVideos .fotorama__stage .fotorama__img{width: 535px !important;height: 400px !important;margin: 0 20px !important}
+    .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 535px !important;height: 400px !important;margin: 0 auto !important}*/
+
+    
 
 }
 .credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: -4px !important;right: 32px !important}
 .credits .fotorama__stage .fotorama__img, .notes .fotorama__stage .fotorama__img, .whatsinpreludered .fotorama__stage .fotorama__img {width: 400px !important;height: 400px !important;margin: 0 20px 0 12px !important}
-.libretto .fotorama__stage .fotorama__img {width: 375px !important;height: 475px !important}
-    
+   
 @media screen and (min-width: 1000px){
     .albumCover {height: 425px !important}
+
+    .libretto .fotorama__stage {width: 473px !important;height: 620px !important}
+        .libretto .fotorama__stage .fotorama__img {width: 435px !important}
+        .libretto .fotorama__fullscreen-icon {top: 18px!important;right: 42px !important}
+
 }
 @media screen and (max-width: 999px){
     .columnLeft, .columnRight {
@@ -217,15 +226,12 @@ map area {
     }
     .fotorama .fotorama__wrap {max-width: 480px !important}
 
-    .musicVideos {width: 100%;position: relative;height: auto;}
-    .musicVideos .fotorama__stage .fotorama__img{width: 400px !important;height: auto !important;margin: 0 20px !important}
-    .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 400px !important;height: auto !important;margin: 0 auto !important}
-
     .credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon {
         top: -4px !important;
         right: 36px !important;
     }
-
+    .libretto .fotorama__stage .fotorama__img {width: 375px !important;height: 475px !important}
+    .libretto .fotorama__stage {width: 475px !important;height: 625px !important}
 }
 @media screen and (max-width: 799px){
     nav.main ul {
@@ -285,7 +291,7 @@ map area {
 @media screen and (min-width: 535px)and (max-width: 986px){
 
 
-      .musicVideos .fotorama__stage .fotorama__img{
+     /* .musicVideos .fotorama__stage .fotorama__img{
         width: 535px !important;
         height: 400px !important;
         margin: 0 20px !important
@@ -295,7 +301,7 @@ map area {
         width: 535px !important;
         height: 400px !important;
         margin: 0 auto !important
-    }
+    }*/
 }
 @media screen and (max-width: 534px){
 
