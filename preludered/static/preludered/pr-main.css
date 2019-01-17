@@ -179,22 +179,15 @@ map area {
     .musicVideos .fotorama__stage .fotorama__img{width: 535px !important;height: 400px !important;margin: 0 20px !important}
     .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 535px !important;height: 400px !important;margin: 0 auto !important}
 }
-@media screen and (max-width: 1199px){
-    .musicVideos {width: 100%;position: relative;height: auto;}
-    .musicVideos .fotorama__stage .fotorama__img{width: 400px !important;height: 400px !important;margin: 0 20px !important}
-    .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 400px !important;height: 400px !important;margin: 0 auto !important}
-}
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1000px) and (max-width: 1199px){
     /*.libretto .fotorama__stage {width: 473px !important;height: 620px !important}
         .libretto .fotorama__stage .fotorama__img {width: 435px !important}
         .libretto .fotorama__fullscreen-icon {top: 18px!important;right: 42px !important}*/
-
-        .credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: -4px !important;right: 32px !important}
-
-    
+        
 }
-
+.credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: -4px !important;right: 32px !important}
 .credits .fotorama__stage .fotorama__img, .notes .fotorama__stage .fotorama__img, .whatsinpreludered .fotorama__stage .fotorama__img {width: 400px !important;height: 400px !important;margin: 0 20px 0 12px !important}
+.libretto .fotorama__stage .fotorama__img {width: 375px !important;height: 475px !important}
     
 @media screen and (min-width: 1000px){
     .albumCover {height: 425px !important}
@@ -207,12 +200,19 @@ map area {
     .columnLeft {
         float: none
     }
+    .columnLeftPage {
+        max-width: 480px
+    }
     .pr-menu {
         padding-top: 50px;
         max-width: 400px;
         margin: 0 auto
     }
-    .fotorama .fotorama__wrap {max-width: 480px}
+    .fotorama .fotorama__wrap {max-width: 480px !important}
+
+    .musicVideos {width: 100%;position: relative;height: auto;}
+    .musicVideos .fotorama__stage .fotorama__img{width: 400px !important;height: auto !important;margin: 0 20px !important}
+    .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 400px !important;height: auto !important;margin: 0 auto !important}
 }
 @media screen and (max-width: 799px){
     nav.main ul {
