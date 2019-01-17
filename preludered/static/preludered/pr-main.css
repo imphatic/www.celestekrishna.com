@@ -94,15 +94,6 @@ map area {
                 width: 400px !important;
                 height: 400px !important;
             }
-            .notes, .credits, .albumCover, .musicVideos, .whatsinpreludered   {
-                /*padding:142px 0 0;*/
-            }
-            .musicVideos {
-                width:610px;
-                position:relative;
-                left:-94px;
-                height: 430px
-            }
 
     .columnRight {
         display: inline-block;
@@ -182,6 +173,17 @@ map area {
 .fotorama__arr--prev {left: -8px !important}
 .fotorama__arr--next {right: -2px !important}
 
+
+@media screen and (min-width: 1200px){
+    .musicVideos {width: 610px;position: relative;left: -130px;height: 430px}
+    .musicVideos .fotorama__stage .fotorama__img{width: 535px !important;height: 400px !important;margin: 0 20px !important}
+    .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 535px !important;height: 400px !important;margin: 0 auto !important}
+}
+@media screen and (max-width: 1199px){
+    .musicVideos {width: 100%;position: relative;height: auto;}
+    .musicVideos .fotorama__stage .fotorama__img{width: 400px !important;height: 400px !important;margin: 0 20px !important}
+    .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 400px !important;height: 400px !important;margin: 0 auto !important}
+}
 @media screen and (min-width: 1000px) {
     /*.libretto .fotorama__stage {width: 473px !important;height: 620px !important}
         .libretto .fotorama__stage .fotorama__img {width: 435px !important}
@@ -189,8 +191,7 @@ map area {
 
         .credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: -4px !important;right: 32px !important}
 
-    .musicVideos .fotorama__stage .fotorama__img{width: 535px !important;height: 400px !important;margin: 0 20px !important}
-    .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 535px !important;height: 400px !important;margin: 0 auto !important}
+    
 }
 
 .credits .fotorama__stage .fotorama__img, .notes .fotorama__stage .fotorama__img, .whatsinpreludered .fotorama__stage .fotorama__img {width: 400px !important;height: 400px !important;margin: 0 20px 0 12px !important}
@@ -211,6 +212,7 @@ map area {
         max-width: 400px;
         margin: 0 auto
     }
+    .fotorama .fotorama__wrap {max-width: 480px}
 }
 @media screen and (max-width: 799px){
     nav.main ul {
@@ -285,7 +287,7 @@ map area {
 @media screen and (max-width: 534px){
 
 
-    .musicVideos .fotorama__stage .fotorama__img{
+   /* .musicVideos .fotorama__stage .fotorama__img{
         width: 100% !important;
         height: auto !important;
     }
@@ -298,7 +300,7 @@ map area {
     .musicVideos .fotorama__stage {
         width: 100% !important;
         height: 400px !important
-    }
+    }*/
 }
 @media screen and (max-width: 430px){
 
