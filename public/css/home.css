@@ -18,7 +18,8 @@ nav.main ul {
     z-index:9999;
 }
     nav.main > ul {
-        padding:8px 0 0 18px;
+        padding:8px 2em;
+        display: block
     }
 
     nav.main > ul > li {

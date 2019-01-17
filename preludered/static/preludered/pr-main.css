@@ -6,22 +6,70 @@ body.preludered {
     background-size: cover;
 }
 
+/*fotorama override defaults*/
+.fotorama__stage, .fotorama__stage * {transform: none !important; -webkit-transform: none !important}
+
+
+
 img[usemap], map area{
     outline: none;
 }
-map area {cursor: pointer}
+
+map area {
+    cursor: pointer
+}
+
+.ht {
+    text-shadow: -2px 1px 0px rgba(21, 170, 172, 1);
+}
+
+.pr-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    padding: 50px 0 15px;
+}
+ .pr-title a, .pr-title > span  {
+    color: #c5c5c5;
+    text-shadow:-2px 1.4px 0px rgba(0, 0, 0, 0.42);
+    padding: 0 1px
+ }
+.pr-menu {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    clear: both;
+    font-style: normal;
+    padding-top: 120px;
+    line-height: 22px;
+}
+.pr-menu a, .pr-menu > span{
+    color: #c5c5c5;
+    text-shadow:-2px 1.4px 0px rgba(0, 0, 0, 0.42);
+    padding: 0 5px
+}
+.pr-menu a:hover, .pr-title a:hover {
+    text-shadow:-2px 1.4px 0px rgba(190, 24, 44, 1)
+}
+.pr-title_active {
+    text-shadow:-2px 1.4px 0px rgba(190, 24, 44, 1) !important;
+}
 
 .pagePreludered {
-    max-width:980px;
+    max-width:1024px;
     margin:0 auto;
+    text-align: center;
+    padding: 3em;
+    position: relative;
+    display: block
 }
 
     .columnLeft {
-        float:left;
-        width:473px;
         position:relative;
-        margin: 0 auto;
         text-align: center;
+        display: inline-block;
+        width: 48%;
+        vertical-align: top;
+        float: left
     }
         .nav {
             padding:40px 0;
@@ -47,7 +95,7 @@ map area {cursor: pointer}
                 height: 400px !important;
             }
             .notes, .credits, .albumCover, .musicVideos, .whatsinpreludered   {
-                padding:142px 0 0;
+                /*padding:142px 0 0;*/
             }
             .musicVideos {
                 width:610px;
@@ -57,18 +105,21 @@ map area {cursor: pointer}
             }
 
     .columnRight {
-        float:right;
-        width:444px;
+        display: inline-block;
         text-align:center;
-        margin: 0 auto
+        width: 48%;
+        position: relative;
+        vertical-align: top
     }
         .playerDirections {
-            display:inline-block;
-            padding:94px 0 0 0;
-            height:48px;
-            width:100%;
             text-align:center;
-            color:#fff;
+            display: block;
+            font-family: 'Open Sans', sans-serif;
+            font-style: italic;
+            color: #c5c5c5;
+            text-shadow:-2px 1.4px 0px rgba(0, 0, 0, 0.42);
+            font-size: 14px;
+            padding: 50px 0 15px
         }
         .playerWrap {
             margin:0 auto;
@@ -97,7 +148,8 @@ map area {cursor: pointer}
 
             img.playerClip {
                 position:absolute;
-                margin:5px 0 0 151px;
+                margin:5px 0 0 150px;
+                filter: drop-shadow(-3px 9px 1px rgba(0,0,0,0.30));
             }
             #playerCircle {
                 margin:41px 0 0 0;
@@ -142,30 +194,38 @@ map area {cursor: pointer}
     .musicVideos .fotorama__stage .fotorama__img{width: 535px !important;height: 400px !important;margin: 0 20px !important}
     .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 535px !important;height: 400px !important;margin: 0 auto !important}
 }
-@media screen and (max-width: 986px) {
-    .columnLeft {
-        float:none;
-        width:100%;
-        text-align:center;
-    }
-        .albumCover {
-            padding-top:30px;
-        }
-        .nav {
-            margin:0 auto;
-        }
 
-    .columnRight {
-        float:none;
-        width:100%;
-        text-align:center;
+@media screen and (max-width: 999px){
+    .columnLeft, .columnRight {
+        width: 100%;
+        display: block;
     }
-        .playerDirections {
-            padding-top:10px;
-        }
-        .playerWrap {
-            margin:0 auto;
-        }
+    .columnLeft {
+        float: none
+    }
+    .pr-menu {
+        padding-top: 50px;
+        max-width: 400px;
+        margin: 0 auto
+    }
+}
+@media screen and (max-width: 799px){
+    nav.main ul {
+        font-size: 13px
+    }
+    nav.main > ul > li {
+        padding-right: 12px
+    }
+    .playerDirections {padding:  25px 0 15px}
+}
+@media screen and (max-width: 1024px) {
+    .pagePreludered {
+        padding: 2em 1em
+    }
+    nav.main > ul {
+        padding: 1em;
+        display: block
+    }
 
     .fotorama__wrap {
         margin: 0 auto;
@@ -204,6 +264,8 @@ map area {cursor: pointer}
     }
 }
 @media screen and (min-width: 535px)and (max-width: 986px){
+
+
       .musicVideos .fotorama__stage .fotorama__img{
         width: 535px !important;
         height: 400px !important;
@@ -217,6 +279,8 @@ map area {cursor: pointer}
     }
 }
 @media screen and (max-width: 534px){
+
+
     .musicVideos .fotorama__stage .fotorama__img{
         width: 100% !important;
         height: auto !important;
@@ -233,6 +297,8 @@ map area {cursor: pointer}
     }
 }
 @media screen and (max-width: 430px){
+
+
     div.libretto .fotorama__stage__frame img{
         width: 100% !important;
         height: auto !important;

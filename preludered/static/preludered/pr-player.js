@@ -85,12 +85,12 @@ var player =
 
     pauseAnimations : function()
     {
-        $('.playerDirections img').attr('src', '/static/img/player-directions-whenpaused.png');
+        $('.playerDirections').html('Click circle to play<br />Click song to select track');
     },
 
     playAnimations : function ()
     {
-        $('.playerDirections img').attr('src', '/static/img/player-directions-whenplaying.png');
+        $('.playerDirections').html('Click circle to pause<br />Click song to select track');
     },
 
     stop : function()

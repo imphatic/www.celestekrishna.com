@@ -20,16 +20,22 @@ $(document).ready(function() {
 
      function playerImgSwap() {
         var playerMapId = document.getElementById('playerMap');
-         var areaElement = playerMapId.getElementsByTagName('area');
+        var areaElement = playerMapId.getElementsByTagName('area');
+
          for (e = 0; e < areaElement.length; e++) {
              areaElement[e].id = 'player' + e;
+
              areaElement[e].onmouseover = function() {
-                 document.getElementById('playerCircle').src = mapHoverImg[this.id.split('player')[1]];
-             }
-             areaElement[e].onmouseout = function() {
-                 document.getElementById('playerCircle').src = '/static/img/player-circle.png';
+              document.getElementById('playerCircle').src = mapHoverImg[this.id.split('player')[1]];
+              }
+             //areaElement[e].addEventListener("click", function(){ 
+               // document.getElementById('playerCircle').src = mapHoverImg[this.id.split('player')[1]];
+              //});
+             areaElement[e].onmouseleave = function() {
+              document.getElementById('playerCircle').src = '/static/img/player-circle.png';
              }
          }
+         
      }
 
      if (window.addEventListener) {
@@ -55,7 +61,7 @@ $(document).ready(function() {
      }
 
      mapHoverImgPreload('/static/img/player_cellphone.png', '/static/img/player_classic.png', '/static/img/player_bethelove.png', '/static/img/player_whyiwrite.png', '/static/img/player_amy.png', '/static/img/player_2ways.png', '/static/img/player_whiplash.png', '/static/img/player_notyourboyfriend.png', '/static/img/player_veryfunnymovie.png', '/static/img/player_morelives.png', '/static/img/player_callupthedevil.png', '/static/img/player_sailme.png', '/static/img/player_subway.png');
-
+     
 
 
      // url hashes

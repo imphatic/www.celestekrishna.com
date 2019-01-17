@@ -1,4 +1,14 @@
 {% load static %}
+<div class="pr-title">
+    <a href="{% url 'preludered:index' %}">Cover</a>
+    <span>&bull;</span>
+    <a href="#notes">Notes</a>
+    <br />
+    <span class="pr-title_active">Libretto</span>
+    <span>&bull;</span>
+    <a href="#credits">Credits</a>
+</div>
+
 <div class="libretto">
     <div class="fotorama"
          data-allowfullscreen="true"
@@ -60,5 +70,6 @@ $('#playerMap area').on('click', function(e){
 
 </script>
 <style type="text/css">
-    .nav {padding: 10px 0 0}
+    .pr-menu a:first-child {text-shadow:-2px 1.4px 0px rgba(190, 24, 44, 1) !important}
 </style>
+

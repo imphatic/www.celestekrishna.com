@@ -13,6 +13,7 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link href="//fonts.googleapis.com/css?family=Libre+Baskerville:400,400i," rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400i,600" rel="stylesheet"> 
         <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
         <link rel="stylesheet" href="{% static 'css/common.css' %}">
         <link rel="stylesheet" href="{% static 'css/home.css' %}">
@@ -26,7 +27,7 @@
             <ul>
                 <li><a href="/">Celeste Krishna</a></li>
                 <li class="menu">
-                    <a href="{% url 'home:works' %}">Works</a>
+                    <a href="{% url 'home:works' %}" class="ht">Works: Prelude Red</a>
                         <ul class="menu">
                             <li><a href="{% url 'preludered:index' %}">Prelude Red</a></li>
                             <li><a href="https://celestekrishna.bandcamp.com/album/ft-celeste-mixtape" target="_blank">Mixtape</a></li>
@@ -39,9 +40,9 @@
         </nav>
 
         <div class="pagePreludered">
+          
             <div class="columnRight">
-                <div class="playerDirections">
-                    <img src="{% static 'img/player-directions-whenpaused.png' %}">
+                <div class="playerDirections">Click circle to play<br />Click song to select track
                 </div>
                 <div class="playerWrap">
                     <a href="javascript: player.pause();void(0);" class="playerCenterCircle"></a> <!-- void added to fix ff bug function returning to false -->
@@ -66,27 +67,31 @@
             </div>
 
             <div class="columnLeft">
+
                 <div class="columnLeftPage">
 
                 {% include "preludered/nav-prelude-red.html" %} 
 
                 </div>
-
-               <div class="nav">
-                    <img src="{% static 'img/nav.png' %}" width="246" height="80" usemap="#pyramid">
-                    <map name="pyramid">
-                      <area shape="rect" coords="80,0,171,13" href="{% url 'preludered:index' %}" class="nav-prelude-red">
-                      <area shape="rect" coords="65,15,127,30" href="#libretto" class="nav-libretto">
-                      <area shape="rect" coords="142,15,191,30" href="#notes" class="nav-notes">
-                      <area shape="rect" coords="36,32,94,47" href="#credits" class="nav-credits">
-                      <area shape="rect" coords="109,32,214,47" href="#music-videos" class="nav-music-videos">
-                      <area shape="rect" coords="16,49,193,64" href="#whats-in-prelude-red" class="nav-whats-in-prelude-red">
-                      <area shape="rect" coords="209,49,234,64" href="#bts" class="nav-bts">
-                      <area shape="rect" coords="0,66,97,80" href="https://bit.ly/preludereddigital" class="nav-digital-copy" target="_blank">
-                      <area shape="rect" coords="138,66,246,80" href="https://bit.ly/preluderedalbum" class="nav-signed-album">
-                    </map>
-                </div>
+                
             </div>
+
+            
+
+            <div class="pr-menu">
+              <a href="{% url 'preludered:index' %}">Prelude Red</a>
+              <span>&bull;</span>
+              <a href="#bts">BTS</a>
+              <span>&bull;</span>
+              <a href="#whats-in-prelude-red">What's in Prelude Red?</a>
+              <span>&bull;</span>
+              <a href="#music-videos" class="mv">Music Videos</a>
+              <span>&bull;</span>
+              <a href="https://bit.ly/preluderedalbum" target="_blank">Signed Album</a>
+              <span>&bull;</span>
+              <a href="https://bit.ly/preludereddigital" target="_blank">Digital Copy</a>
+            </div>
+            
         </div>
 
         <script src="/static/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -103,42 +108,42 @@
         <script src="/static/preludered/pr-player.js"></script>
 
         <script type='text/javascript'>
-        $(document).ready(function(){
+          $(document).ready(function(){
 
-            player.init();
-            nav.init();
+              player.init();
+              nav.init();
 
-            track = Math.floor((Math.random() * player.totalTracks) + 1);
-                player.positionCircle(track);
+              track = Math.floor((Math.random() * player.totalTracks) + 1);
+                  player.positionCircle(track);
 
-            {% if auto_play == 1 %}
-                player.play(track);
-            {% else %}
-                player.positionCircle(track);
-            {% endif %}
+              {% if auto_play == 1 %}
+                  player.play(track);
+              {% else %}
+                  player.positionCircle(track);
+              {% endif %}
 
-            // Touch events on image maps
-            function isMobile() {
-              try{
-                document.createEvent('TouchEvent');
-                return true;
+              // Touch events on image maps
+              function isMobile() {
+                try{
+                  document.createEvent('TouchEvent');
+                  return true;
+                }
+                catch(e){
+                  return false;
+                }
               }
-              catch(e){
-                return false;
+
+              // Conditional statement on touch event image maps
+              if (isMobile()){
+                $('map').after('<div class="map-touch-fix" style="position:absolute;top:0;left:0;width:100%;height:100%;">');
+                $('.map-touch-fix').click(function(event){
+                  $(this).hide();
+                  $(document.elementFromPoint(event.clientX,event.clientY)).trigger('click');
+                  $(this).show();
+                });
               }
-            }
 
-            // Conditional statement on touch event image maps
-            if (isMobile()){
-              $('map').after('<div class="map-touch-fix" style="position:absolute;top:0;left:0;width:100%;height:100%;">');
-              $('.map-touch-fix').click(function(event){
-                $(this).hide();
-                $(document.elementFromPoint(event.clientX,event.clientY)).trigger('click');
-                $(this).show();
-              });
-            }
-
-        });
+          });
         </script>
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
                 <!--
