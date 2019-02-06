@@ -29,32 +29,51 @@
     });
 </script>
 <style type="text/css">
-    .mv {text-shadow:-2px 1.4px 0px rgba(190, 24, 44, 1) !important}
-    .mar {display: none !important}
+    .mv {
+    text-shadow: -2px 1.4px 0px rgba(190, 24, 44, 1) !important
+}
 
-    div.fotorama__caption {
-        top: 0;
-        width: 100%;
-        text-align: center;
-        height: 40px
-    }
+.mar {
+    display: none !important
+}
+
+div.fotorama__caption {
+    top: 0;
+    width: 100%;
+    text-align: center;
+    height: 40px
+}
+
+div.fotorama__caption__wrap {
+    background: none;
+    color: #fff;
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    padding: 0;
+    font-size: 15px;
+    line-height: 40px
+}
+
+@media screen and (min-width: 1000px) {
     div.fotorama__caption__wrap {
-        background:none;
-        color:#fff;
-        font-family: 'Libre Baskerville', serif;
-        font-style: italic;
-        padding: 0;
         font-size: 15px;
-        line-height: 40px
+        line-height: 50px
     }
-    @media screen and (min-width: 1000px) { 
-        div.fotorama__caption__wrap {font-size: 15px;line-height: 50px}
-        div.fotorama__caption {height:50px}
+    div.fotorama__caption {
+        height: 50px
     }
-    @media screen and (max-width: 1199px){
-        .columnLeft, .columnRight {
+}
+
+@media screen and (max-width: 1199px) {
+    .columnLeft,
+    .columnRight {
         width: 100%;
         display: block;
+    }
+    .pr-menu {
+        padding-top: 0;
+        margin: -10px auto 0;
+        max-width: 400px
     }
     .columnLeft {
         float: none
@@ -63,17 +82,22 @@
         max-width: 480px;
         margin: 0 auto
     }
-    .fotorama .fotorama__wrap {max-width: 480px !important}
+    .fotorama .fotorama__wrap {
+        max-width: 480px !important
     }
-    @media screen and (min-width: 1200px){
-    .pr-title {padding: 45px 0 15px;margin-left: -120px}
-    .playerDirections {padding-top: 25px}
-    .pr-menu {padding-top: 100px;padding-right: 110px}
+}
+
+@media screen and (min-width: 1200px) {
+    .pr-title {
+        padding: 45px 0 15px;
+        margin-left: -120px
     }
-    @media screen and (max-width: 999px){
-        .pr-menu {
-        padding-top: 0;
-        margin: -10px auto 0;
-        }
+    .playerDirections {
+        padding-top: 25px
     }
+    .pr-menu {
+        padding-top: 120px;
+        padding-right: 110px
+    }
+}
 </style>

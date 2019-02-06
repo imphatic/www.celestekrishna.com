@@ -6,13 +6,17 @@ body.preludered {
     background-size: cover;
 }
 
+
 /*fotorama override defaults*/
+
+
 /*.fotorama__stage, .fotorama__stage * {transform: none !important; -webkit-transform: none !important}*/
+
+
 /*disable to allow the fotorama close button to pop out*/
 
-
-
-img[usemap], map area{
+img[usemap],
+map area {
     outline: none;
 }
 
@@ -30,11 +34,14 @@ map area {
     font-style: normal;
     padding: 35px 0 15px;
 }
- .pr-title a, .pr-title > span  {
+
+.pr-title a,
+.pr-title > span {
     color: #c5c5c5;
-    text-shadow:-2px 1.4px 0px rgba(0, 0, 0, 0.42);
+    text-shadow: -2px 1.4px 0px rgba(0, 0, 0, 0.42);
     padding: 0 1px
- }
+}
+
 .pr-menu {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
@@ -43,171 +50,266 @@ map area {
     padding-top: 120px;
     line-height: 22px;
 }
-.pr-menu a, .pr-menu > span{
+
+.pr-menu a,
+.pr-menu > span {
     color: #c5c5c5;
-    text-shadow:-2px 1.4px 0px rgba(0, 0, 0, 0.42);
+    text-shadow: -2px 1.4px 0px rgba(0, 0, 0, 0.42);
     padding: 0 5px
 }
-.pr-menu a:hover, .pr-title a:hover {
-    text-shadow:-2px 1.4px 0px rgba(190, 24, 44, 1)
+
+.pr-menu a:hover,
+.pr-title a:hover {
+    text-shadow: -2px 1.4px 0px rgba(190, 24, 44, 1)
 }
+
 .pr-title_active {
-    text-shadow:-2px 1.4px 0px rgba(190, 24, 44, 1) !important;
+    text-shadow: -2px 1.4px 0px rgba(190, 24, 44, 1) !important;
 }
 
 .pagePreludered {
-    max-width:1000px;
-    margin:0 auto;
+    max-width: 1000px;
+    margin: 0 auto;
     text-align: center;
     padding: 3em;
     position: relative;
     display: block
 }
 
-    .columnLeft {
-        position:relative;
-        text-align: center;
-        display: inline-block;
-        width: 48%;
-        vertical-align: top;
-        float: left
-    }
-        .nav {
-            padding:40px 0;
-            width:100%;
-            max-width: 400px;
-            text-align:center;
-            font-style:normal;
-            color:#fff;
-            margin: 0 auto
-        }
-            .nav a {
-                color:#fff;
-                padding:0 5px;
-            }
-            .nav a:hover {
-                color:#ca1520;
-            }
-            .albumCover img.cover {
-                -webkit-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.30);
-                -moz-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.30);
-                box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.30);
-                width: 400px !important;
-                height: 400px !important;
-            }
+.columnLeft {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    float: left
+}
 
-    .columnRight {
-        display: inline-block;
-        text-align:center;
-        width: 48%;
-        position: relative;
-        vertical-align: top
-    }
-        .playerDirections {
-            text-align:center;
-            display: block;
-            font-family: 'Open Sans', sans-serif;
-            font-style: italic;
-            color: #c5c5c5;
-            text-shadow:-2px 1.4px 0px rgba(0, 0, 0, 0.42);
-            font-size: 14px;
-            padding: 35px 0 15px
-        }
-        .playerWrap {
-            margin:0 auto;
-            background:url('../img/player-bg.jpg');
-            width:400px;
-            height:400px;
-            text-align:center;
-            position:relative;
-            -webkit-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.30);
-            -moz-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.30);
-            box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.30);
-        }
-            .playerCenterCircle {
-                position:absolute;
-                display:block;
-                height:70px;
-                width:69px;
-                top:169px;
-                left:165px;
-                z-index:20;
-                background:url('../img/player-center-circle.png');
-            }
-            .playerCenterCircle:hover {
-                background:url('../img/player-center-circle-hover.png');
-            }
+.nav {
+    padding: 40px 0;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    font-style: normal;
+    color: #fff;
+    margin: 0 auto
+}
 
-            img.playerClip {
-                position:absolute;
-                margin:5px 0 0 150px;
-            }
-            #playerCircle {
-                margin:41px 0 0 0;
-            }
+.nav a {
+    color: #fff;
+    padding: 0 5px;
+}
+
+.nav a:hover {
+    color: #ca1520;
+}
+
+.albumCover img.cover {
+    -webkit-box-shadow: -20px 20px 5px 0px rgba(0, 0, 0, 0.30);
+    -moz-box-shadow: -20px 20px 5px 0px rgba(0, 0, 0, 0.30);
+    box-shadow: -20px 20px 5px 0px rgba(0, 0, 0, 0.30);
+    width: 400px !important;
+    height: 400px !important;
+}
+
+.columnRight {
+    display: inline-block;
+    text-align: center;
+    width: 48%;
+    position: relative;
+    vertical-align: top
+}
+
+.playerDirections {
+    text-align: center;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    color: #c5c5c5;
+    text-shadow: -2px 1.4px 0px rgba(0, 0, 0, 0.42);
+    font-size: 14px;
+    padding: 35px 0 15px
+}
+
+.playerWrap {
+    margin: 0 auto;
+    background: url('../img/player-bg.jpg');
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    position: relative;
+    -webkit-box-shadow: -20px 20px 5px 0px rgba(0, 0, 0, 0.30);
+    -moz-box-shadow: -20px 20px 5px 0px rgba(0, 0, 0, 0.30);
+    box-shadow: -20px 20px 5px 0px rgba(0, 0, 0, 0.30);
+}
+
+.playerCenterCircle {
+    position: absolute;
+    display: block;
+    height: 70px;
+    width: 69px;
+    top: 169px;
+    left: 165px;
+    z-index: 20;
+    background: url('../img/player-center-circle.png');
+}
+
+.playerCenterCircle:hover {
+    background: url('../img/player-center-circle-hover.png');
+}
+
+img.playerClip {
+    position: absolute;
+    margin: 5px 0 0 152px;
+}
+
+#playerCircle {
+    margin: 41px 0 0 0;
+}
 
 
 /*Fotorama Edits*/
 
 .fotorama {
-    overflow:inherit !important;
+    overflow: inherit !important;
 }
 
-.libretto .fotorama__stage__shaft {filter: drop-shadow(-20px 20px 3px rgba(0,0,0,0.30))}
-    .libretto .fotorama__stage .fotorama__img, .libretto .fotorama__stage__shaft {margin: 0 auto !important}
-    .libretto .fotorama__wrap.fotorama__wrap--css3 {margin: 0 auto}
+.libretto .fotorama__stage__shaft {
+    filter: drop-shadow(-20px 20px 3px rgba(0, 0, 0, 0.30))
+}
 
-.credits .fotorama__stage__shaft, .notes .fotorama__stage__shaft, .whatsinpreludered .fotorama__stage__shaft{
+.libretto .fotorama__stage .fotorama__img,
+.libretto .fotorama__stage__shaft {
+    margin: 0 auto !important
+}
+
+.libretto .fotorama__wrap.fotorama__wrap--css3 {
+    margin: 0 auto
+}
+
+.credits .fotorama__stage__shaft,
+.notes .fotorama__stage__shaft,
+.whatsinpreludered .fotorama__stage__shaft {
     /* box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);*/
-    filter: drop-shadow(-20px 20px 3px rgba(0,0,0,0.30));
+    filter: drop-shadow(-20px 20px 3px rgba(0, 0, 0, 0.30));
 }
+
 .musicVideos .fotorama__stage__shaft {
-    filter: drop-shadow(-20px 20px 3px rgba(0,0,0,0.30));
+    filter: drop-shadow(-20px 20px 3px rgba(0, 0, 0, 0.30));
 }
-    .musicVideos .fotorama__arr--prev {left: -5px !important}
-    .musicVideos .fotorama__arr--next {right: -5px !important}
-    .musicVideos .fotorama__fullscreen-icon {top: -3px !important;right: 36px !important}
-    .musicVideos .fotorama__video-close {top: -3px !important;right: 30px !important}
 
-
-.fotorama__arr--prev {left: -8px !important}
-.fotorama__arr--next {right: -2px !important}
-
-
-@media screen and (min-width: 1200px){
-    .musicVideos {width: 610px;position: relative;left: -130px;height: 430px}
-    .musicVideos .fotorama__stage .fotorama__img{width: 535px !important;height: 400px !important;margin: 0 20px !important}
-    .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 535px !important;height: 400px !important;margin: 0 auto !important}
+.musicVideos .fotorama__arr--prev {
+    left: -5px !important
 }
-@media screen and (max-width: 1199px){
-.musicVideos {width: 100%;position: relative;height: auto;}
-    .musicVideos .fotorama__stage .fotorama__img{width: 400px !important;height: 300px !important;margin: 0 auto !important}
-    .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 400px !important;height: 300px !important;margin: 0 auto !important}
+
+.musicVideos .fotorama__arr--next {
+    right: -5px !important
 }
-@media screen and (min-width: 1000px) and (max-width: 1199px){
+
+.musicVideos .fotorama__fullscreen-icon {
+    top: -3px !important;
+    right: 36px !important
+}
+
+.musicVideos .fotorama__video-close {
+    top: -3px !important;
+    right: 30px !important
+}
+
+.fotorama__arr--prev {
+    left: -8px !important
+}
+
+.fotorama__arr--next {
+    right: -2px !important
+}
+
+@media screen and (min-width: 1200px) {
+    .musicVideos {
+        width: 610px;
+        position: relative;
+        left: -130px;
+        height: 430px
+    }
+    .musicVideos .fotorama__stage .fotorama__img {
+        width: 535px !important;
+        height: 400px !important;
+        margin: 0 20px !important
+    }
+    .musicVideos .fotorama__stage .fotorama__video {
+        top: 0;
+        width: 535px !important;
+        height: 400px !important;
+        margin: 0 auto !important
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .musicVideos {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+    .musicVideos .fotorama__stage .fotorama__img {
+        width: 400px !important;
+        height: 300px !important;
+        margin: 0 auto !important
+    }
+    .musicVideos .fotorama__stage .fotorama__video {
+        top: 0;
+        width: 400px !important;
+        height: 300px !important;
+        margin: 0 auto !important
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
     /*.libretto .fotorama__stage {width: 473px !important;height: 620px !important}
         .libretto .fotorama__stage .fotorama__img {width: 435px !important}
         .libretto .fotorama__fullscreen-icon {top: 18px!important;right: 42px !important}*/
-
-   /* .musicVideos {width: 610px;position: relative;left: -130px;height: 430px}
+    /* .musicVideos {width: 610px;position: relative;left: -130px;height: 430px}
     .musicVideos .fotorama__stage .fotorama__img{width: 535px !important;height: 400px !important;margin: 0 20px !important}
     .musicVideos .fotorama__stage .fotorama__video {top: 0;width: 535px !important;height: 400px !important;margin: 0 auto !important}*/
-
-    
-
-}
-.credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: -4px !important;right: 36px !important}
-.credits .fotorama__stage .fotorama__img, .notes .fotorama__stage .fotorama__img, .whatsinpreludered .fotorama__stage .fotorama__img {width: 400px !important;height: 400px !important;margin: 0 20px 0 12px !important}
-.libretto .fotorama__fullscreen-icon {top: 6px !important;right: 44px !important} 
-@media screen and (min-width: 1000px){
-    .albumCover {height: 425px !important}
-
-    .libretto .fotorama__stage {width: 480px !important;height: 550px !important}
-        .libretto .fotorama__stage .fotorama__img {width: 400px !important;height: 500px !important;left: 0 !important}
 }
 
-@media screen and (max-width: 999px){
-    .columnLeft, .columnRight {
+.credits .fotorama__fullscreen-icon,
+.notes .fotorama__fullscreen-icon,
+.whatsinpreludered .fotorama__fullscreen-icon {
+    top: -4px !important;
+    right: 36px !important
+}
+
+.credits .fotorama__stage .fotorama__img,
+.notes .fotorama__stage .fotorama__img,
+.whatsinpreludered .fotorama__stage .fotorama__img {
+    width: 400px !important;
+    height: 400px !important;
+    margin: 0 20px 0 12px !important
+}
+
+.libretto .fotorama__fullscreen-icon {
+    top: 6px !important;
+    right: 44px !important
+}
+
+@media screen and (min-width: 1000px) {
+    .albumCover {
+        height: 425px !important
+    }
+    .libretto .fotorama__stage {
+        width: 480px !important;
+        height: 550px !important
+    }
+    .libretto .fotorama__stage .fotorama__img {
+        width: 400px !important;
+        height: 500px !important;
+        left: 0 !important
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .columnLeft,
+    .columnRight {
         width: 100%;
         display: block;
     }
@@ -223,17 +325,27 @@ map area {
         max-width: 400px;
         margin: 0 auto
     }
-    .fotorama .fotorama__wrap {max-width: 480px !important}
-
-    .credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon {
+    .fotorama .fotorama__wrap {
+        max-width: 480px !important
+    }
+    .credits .fotorama__fullscreen-icon,
+    .notes .fotorama__fullscreen-icon,
+    .whatsinpreludered .fotorama__fullscreen-icon {
         top: -4px !important;
         right: 36px !important;
     }
-    .libretto .fotorama__stage .fotorama__img {width: 400px !important;height: 500px !important;
-    left: 0 !important}
-    .libretto .fotorama__stage {width: 480px !important;height: 550px !important}
+    .libretto .fotorama__stage .fotorama__img {
+        width: 400px !important;
+        height: 500px !important;
+        left: 0 !important
+    }
+    .libretto .fotorama__stage {
+        width: 480px !important;
+        height: 550px !important
+    }
 }
-@media screen and (max-width: 799px){
+
+@media screen and (max-width: 799px) {
     nav.main ul {
         font-size: 13px
     }
@@ -241,9 +353,14 @@ map area {
         padding-right: 12px
     }
 }
-@media screen and (min-width: 1500px){
-    .pr-title, .playerDirections {padding-top: 25px}
+
+@media screen and (min-width: 1500px) {
+    .pr-title,
+    .playerDirections {
+        padding-top: 25px
+    }
 }
+
 @media screen and (max-width: 1024px) {
     .pagePreludered {
         padding: 2em 1em
@@ -252,12 +369,11 @@ map area {
         padding: 1em;
         display: block
     }
-
     .fotorama__wrap {
         margin: 0 auto;
     }
-
-    div.notes .fotorama__stage__frame img, div.credits .fotorama__stage__frame img {
+    div.notes .fotorama__stage__frame img,
+    div.credits .fotorama__stage__frame img {
         width: 100% !important;
         height: auto;
         max-width: 400px !important;
@@ -268,7 +384,7 @@ map area {
     }
 }
 
-@media screen and (min-width: 431px) and (max-width: 986px){
+@media screen and (min-width: 431px) and (max-width: 986px) {
     /*div.libretto .fotorama__stage__frame img{
         width: 430px !important;
         height: auto !important
@@ -279,10 +395,9 @@ map area {
         margin: 0 auto !important
     }*/
 }
-@media screen and (min-width: 535px)and (max-width: 986px){
 
-
-     /* .musicVideos .fotorama__stage .fotorama__img{
+@media screen and (min-width: 535px)and (max-width: 986px) {
+    /* .musicVideos .fotorama__stage .fotorama__img{
         width: 535px !important;
         height: 400px !important;
         margin: 0 20px !important
@@ -294,10 +409,9 @@ map area {
         margin: 0 auto !important
     }*/
 }
-@media screen and (max-width: 534px){
 
-
-   /* .musicVideos .fotorama__stage .fotorama__img{
+@media screen and (max-width: 534px) {
+    /* .musicVideos .fotorama__stage .fotorama__img{
         width: 100% !important;
         height: auto !important;
     }
@@ -312,9 +426,8 @@ map area {
         height: 400px !important
     }*/
 }
-@media screen and (max-width: 430px){
 
-
+@media screen and (max-width: 430px) {
     /*div.libretto .fotorama__stage__frame img{
         width: 100% !important;
         height: auto !important;
