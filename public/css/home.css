@@ -44,20 +44,20 @@ nav.main ul {
         }
 
 .page {
-    margin:100px 0 0 76px;
+    padding: 2em 1em
 }
 
 .bandsInTown {
-    max-width:800px;
+    max-width:100%;
  }
  .vids {
     display:none;
  }
 
 
-@media screen and (max-width: 720px) {
-    .page {
-        margin-left:0;
+@media screen and (min-width:1024px) {
+    .bandsInTown {
+        max-width:800px;
     }
 }
 
