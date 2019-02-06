@@ -7,7 +7,8 @@ body.preludered {
 }
 
 /*fotorama override defaults*/
-.fotorama__stage, .fotorama__stage * {transform: none !important; -webkit-transform: none !important}
+/*.fotorama__stage, .fotorama__stage * {transform: none !important; -webkit-transform: none !important}*/
+/*disable to allow the fotorama close button to pop out
 
 
 
@@ -27,7 +28,7 @@ map area {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-style: normal;
-    padding: 50px 0 15px;
+    padding: 35px 0 15px;
 }
  .pr-title a, .pr-title > span  {
     color: #c5c5c5;
@@ -110,7 +111,7 @@ map area {
             color: #c5c5c5;
             text-shadow:-2px 1.4px 0px rgba(0, 0, 0, 0.42);
             font-size: 14px;
-            padding: 50px 0 15px
+            padding: 35px 0 15px
         }
         .playerWrap {
             margin:0 auto;
@@ -140,7 +141,6 @@ map area {
             img.playerClip {
                 position:absolute;
                 margin:5px 0 0 150px;
-                filter: drop-shadow(-3px 9px 1px rgba(0,0,0,0.30));
             }
             #playerCircle {
                 margin:41px 0 0 0;
@@ -196,7 +196,7 @@ map area {
     
 
 }
-.credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: -4px !important;right: 32px !important}
+.credits .fotorama__fullscreen-icon, .notes .fotorama__fullscreen-icon, .whatsinpreludered .fotorama__fullscreen-icon{top: -4px !important;right: 36px !important}
 .credits .fotorama__stage .fotorama__img, .notes .fotorama__stage .fotorama__img, .whatsinpreludered .fotorama__stage .fotorama__img {width: 400px !important;height: 400px !important;margin: 0 20px 0 12px !important}
 .libretto .fotorama__fullscreen-icon {top: 6px !important;right: 44px !important} 
 @media screen and (min-width: 1000px){
@@ -240,12 +240,10 @@ map area {
     nav.main > ul > li {
         padding-right: 12px
     }
-    .playerDirections {padding:  25px 0 15px}
 }
-@media screen and (max-width: 599px){
-
+@media screen and (min-width: 1500px){
+    .pr-title, .playerDirections {padding-top: 25px}
 }
-
 @media screen and (max-width: 1024px) {
     .pagePreludered {
         padding: 2em 1em
