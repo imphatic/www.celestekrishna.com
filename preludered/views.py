@@ -38,3 +38,7 @@ def nav_credits(request):
 def nav_music_videos(request):
     music_videos = MusicVideos.objects.order_by('order')
     return render(request, 'preludered/nav-music-videos.html', {'music_videos': music_videos})
+
+def nav_bts(request):
+    bts = Bts.objects.order_by('order')
+    return render(request, 'preludered/nav-bts.html', {'bts': bts})
