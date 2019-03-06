@@ -85,5 +85,9 @@ $(document).ready(function() {
          event.preventDefault();
          location.hash = "#" + this.getAttribute('href').substr(1);
      });
+     $('.nav-bts').click(function(event) {
+         event.preventDefault();
+         window.location.hash = '#bts';
+     });
 
  });

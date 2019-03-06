@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
-from .models import Music, Notes, Credits, MusicVideos
+from .models import Music, Notes, Credits, MusicVideos, Bts
 
 import random
 
@@ -16,7 +16,6 @@ def index(request):
 def nav_prelude_red(request):
     return render(request, 'preludered/nav-prelude-red.html')
 
-
 def nav_libretto(request, track):
     music = Music.objects.order_by('track_number')
     data = {
@@ -24,7 +23,6 @@ def nav_libretto(request, track):
         'start_track': track
     }
     return render(request, 'preludered/nav-libretto.html', data)
-
 
 def nav_notes(request):
     notes = Notes.objects.order_by('order')
