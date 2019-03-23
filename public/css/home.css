@@ -1,11 +1,11 @@
 
 body {
-    background: url('../img/bg-home.jpg') no-repeat center center fixed;
+    background: url('../img/bg-home.jpg') repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    color:#000000;
+    color:#000;
 }
 
 nav.main ul {
