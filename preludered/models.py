@@ -56,3 +56,18 @@ class MusicVideos(models.Model):
     class Meta:
         verbose_name = 'Music Video'
         verbose_name_plural = 'Music Videos'
+
+
+class WhatsinPreludeRed(models.Model):
+    order = models.IntegerField(default=0)
+    image = models.FileField(upload_to='uploads/', default='')
+    title = models.CharField(max_length=255, default='')
+
+    def admin_image(self):
+        return '<img src="/static/%s" height="100" />' % self.image
+
+    admin_image.allow_tags = True
+
+    class Meta:
+        verbose_name = 'WhatsinPreludeRed'
+        verbose_name_plural = 'WhatsinPreludeRed'
