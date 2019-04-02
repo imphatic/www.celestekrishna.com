@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
-from .models import Music, Notes, Credits, MusicVideos
+from .models import Music, Notes, Credits, MusicVideos, WhatsinPreludeRed
 
 import random
 
@@ -32,8 +32,10 @@ def nav_credits(request):
     credits = Credits.objects.order_by('order')
     return render(request, 'preludered/nav-credits.html', {'credits': credits})
 
-
 def nav_music_videos(request):
     music_videos = MusicVideos.objects.order_by('order')
     return render(request, 'preludered/nav-music-videos.html', {'music_videos': music_videos})
 
+def nav_whatsinpreludered(request):
+    whatsinpreludered = WhatsinPreludeRed.objects.order_by('order')
+    return render(request, 'preludered/nav-whats-in-prelude-red.html', {'whatsinpreludered': whatsinpreludered})

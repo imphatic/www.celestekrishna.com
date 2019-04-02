@@ -69,5 +69,5 @@ class WhatsinPreludeRed(models.Model):
     admin_image.allow_tags = True
 
     class Meta:
-        verbose_name = 'WhatsinPreludeRed'
-        verbose_name_plural = 'WhatsinPreludeRed'
+        verbose_name = 'Whats in Prelude Red'
+        verbose_name_plural = 'Whats in Prelude Red'

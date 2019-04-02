@@ -8,5 +8,6 @@ urlpatterns = [
     url(r'^nav/libretto/(?P<track>[0-9]+)$', views.nav_libretto, name='nav_libretto'),
     url(r'^nav/notes$', views.nav_notes, name='nav_notes'),
     url(r'^nav/credits$', views.nav_credits, name='nav_credits'),
-    url(r'^nav/music-videos$', views.nav_music_videos, name='nav_music_videos')
+    url(r'^nav/music-videos$', views.nav_music_videos, name='nav_music_videos'),
+    url(r'^nav/whats-in-prelude-red$', views.nav_whatsinpreludered, name='nav_whatsinpreludered')
 ]

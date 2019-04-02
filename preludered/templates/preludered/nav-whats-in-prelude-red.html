@@ -1,0 +1,21 @@
+{% load static %}
+
+<div class="whats-in-prelude-red">
+    <div class="fotorama"
+         data-maxheight="425"
+         data-allowfullscreen="true"
+         data-nav="false"
+         data-loop="true">
+        {% for whatsinprelude in whatsinpreludered %}
+        <img src="{% static whatsinprelude.image %}">
+        {% endfor %}
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('.fotorama').fotorama();
+</script>
+<style type="text/css">
+    .pr-menu a:first-child {text-shadow:-2px 1.4px 0px rgba(190, 24, 44, 1) !important}
+    .cr {text-shadow:-2px 1.4px 0px rgba(190, 24, 44, 1) !important}
+</style>
