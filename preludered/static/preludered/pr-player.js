@@ -252,7 +252,10 @@ var nav =
             }
         },
         'whats-in-prelude-red' : {
-            'hover' : 'nav-whats-in-prelude-red.png'
+            'hover' : 'nav-whats-in-prelude-red.png',
+            'click' : function(){
+                nav.load_page('preludered/nav/whats-in-prelude-red');
+            }
         },
         'bts' : {
             'hover' : 'nav-bts.png'
