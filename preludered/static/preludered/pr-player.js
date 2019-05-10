@@ -254,7 +254,7 @@ var nav =
         'whats-in-prelude-red' : {
             'hover' : 'nav-whats-in-prelude-red.png',
             'click' : function(){
-                nav.load_page('preludered/nav/whats-in-prelude-red');
+                nav.load_page('/preludered/nav/whats-in-prelude-red');
             }
         },
         'bts' : {
