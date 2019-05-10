@@ -75,10 +75,10 @@ class WhatsinPreludeRed(models.Model):
 
 class Bts(models.Model):
     order = models.IntegerField(default=0)
-    image = models.FileField(upload_to='uploads/', default='')
+    image = models.FileField(upload_to='uploads/', default='', null=True, blank=True)
     title = models.CharField(max_length=255, default='')
-    href = models.CharField(max_length=500, default='')
-    
+    href = models.CharField(max_length=500, default='', null=True, blank=True)
+
     def admin_image(self):
         return '<img src="/static/%s" height="100" />' % self.image
 
