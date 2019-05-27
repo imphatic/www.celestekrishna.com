@@ -258,7 +258,10 @@ var nav =
             }
         },
         'bts' : {
-            'hover' : 'nav-bts.png'
+            'hover' : 'nav-bts.png',
+            'click' : function(){
+                nav.load_page('/preludered/nav/bts');
+            }
         },
         'digital-copy' : {
             'hover' : 'nav-digital-copy.png'
