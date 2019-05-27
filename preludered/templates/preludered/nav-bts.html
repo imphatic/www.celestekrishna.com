@@ -1,3 +1,37 @@
+{% load static %}
 <div class="pr-title">
     <span>Behind the Scenes</span>
 </div>
+<div class="bts">
+    <div class="fotorama"
+         data-allowfullscreen="true"
+         data-nav="false"
+         data-arrows="true"
+         data-loop="true">
+        {% for bs in bts %}
+        <img src="{% static bs.image %}">
+        {% endfor %}
+
+        {% for bs in bts %}
+            <a href="{{ bs.href }}" data-caption="{{ bs.title }}"></a>
+        {% endfor %}
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $('.fotorama').on('fotorama:loadvideo', function (e, fotorama, extra) 
+            {
+                if(player.playlist[player.currentTrack].playing())
+                {
+                    player.pause();
+                }
+                
+        }).fotorama();
+    });
+</script>
+
+<style type="text/css">
+    .bt {text-shadow:-2px 1.4px 0px rgba(190, 24, 44, 1) !important}
+    .mar {display: none !important}
+</style>
