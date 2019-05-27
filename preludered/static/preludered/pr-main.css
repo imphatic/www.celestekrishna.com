@@ -190,7 +190,8 @@ img.playerClip {
 
 .credits .fotorama__stage__shaft,
 .notes .fotorama__stage__shaft,
-.whatsinpreludered .fotorama__stage__shaft {
+.whats-in-prelude-red .fotorama__stage__shaft,
+.bts .fotorama__stage__shaft {
     /* box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.28);*/
     filter: drop-shadow(-20px 20px 3px rgba(0, 0, 0, 0.30));
 }
@@ -266,14 +267,14 @@ img.playerClip {
 
 .credits .fotorama__fullscreen-icon,
 .notes .fotorama__fullscreen-icon,
-.whatsinpreludered .fotorama__fullscreen-icon {
+.whats-in-prelude-red .fotorama__fullscreen-icon {
     top: -4px !important;
     right: 36px !important
 }
 
 .credits .fotorama__stage .fotorama__img,
 .notes .fotorama__stage .fotorama__img,
-.whatsinpreludered .fotorama__stage .fotorama__img {
+.whats-in-prelude-red .fotorama__stage .fotorama__img{
     width: 400px !important;
     height: 400px !important;
     margin: 0 20px 0 12px !important
@@ -322,7 +323,7 @@ img.playerClip {
     }
     .credits .fotorama__fullscreen-icon,
     .notes .fotorama__fullscreen-icon,
-    .whatsinpreludered .fotorama__fullscreen-icon {
+    .whats-in-prelude-red .fotorama__fullscreen-icon {
         top: -4px !important;
         right: 36px !important;
     }
@@ -365,7 +366,8 @@ img.playerClip {
         margin: 0 auto;
     }
     div.notes .fotorama__stage__frame img,
-    div.credits .fotorama__stage__frame img {
+    div.credits .fotorama__stage__frame img,
+    div.whats-in-prelude-red .fotorama__stage__frame img {
         width: 100% !important;
         height: auto;
         max-width: 400px !important;
