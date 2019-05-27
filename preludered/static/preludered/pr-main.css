@@ -175,7 +175,8 @@ img.playerClip {
     overflow: inherit !important;
 }
 
-.libretto .fotorama__stage__shaft {
+.libretto .fotorama__stage__shaft,
+.musicVideos .fotorama__stage__shaft {
     filter: drop-shadow(-20px 20px 3px rgba(0, 0, 0, 0.30))
 }
 
@@ -196,24 +197,24 @@ img.playerClip {
     filter: drop-shadow(-20px 20px 3px rgba(0, 0, 0, 0.30));
 }
 
-.musicVideos .fotorama__stage__shaft {
-    filter: drop-shadow(-20px 20px 3px rgba(0, 0, 0, 0.30));
-}
-
-.musicVideos .fotorama__arr--prev {
+.musicVideos .fotorama__arr--prev,
+.bts .fotorama__arr--prev {
     left: -5px !important
 }
 
-.musicVideos .fotorama__arr--next {
+.musicVideos .fotorama__arr--next,
+.bts .fotorama__arr--next {
     right: -5px !important
 }
 
-.musicVideos .fotorama__fullscreen-icon {
+.musicVideos .fotorama__fullscreen-icon,
+.bts .fotorama__fullscreen-icon {
     top: -3px !important;
     right: 36px !important
 }
 
-.musicVideos .fotorama__video-close {
+.musicVideos .fotorama__video-close,
+.bts .fotorama__video-close {
     top: -3px !important;
     right: 30px !important
 }
@@ -227,18 +228,21 @@ img.playerClip {
 }
 
 @media screen and (min-width: 1200px) {
-    .musicVideos {
+    .musicVideos,
+    .bts {
         width: 610px;
         position: relative;
         left: -130px;
         height: 430px
     }
-    .musicVideos .fotorama__stage .fotorama__img {
+    .musicVideos .fotorama__stage .fotorama__img,
+    .bts .fotorama__stage .fotorama__img {
         width: 535px !important;
         height: 400px !important;
         margin: 0 20px !important
     }
-    .musicVideos .fotorama__stage .fotorama__video {
+    .musicVideos .fotorama__stage .fotorama__video,
+    .bts .fotorama__stage .fotorama__video {
         top: 0;
         width: 535px !important;
         height: 400px !important;
@@ -247,17 +251,20 @@ img.playerClip {
 }
 
 @media screen and (max-width: 1199px) {
-    .musicVideos {
+    .musicVideos,
+    .bts {
         width: 100%;
         position: relative;
         height: auto;
     }
-    .musicVideos .fotorama__stage .fotorama__img {
+    .musicVideos .fotorama__stage .fotorama__img,
+    .bts .fotorama__stage .fotorama__img {
         width: 400px !important;
         height: 300px !important;
         margin: 0 auto !important
     }
-    .musicVideos .fotorama__stage .fotorama__video {
+    .musicVideos .fotorama__stage .fotorama__video,
+    .bts .fotorama__stage .fotorama__video {
         top: 0;
         width: 400px !important;
         height: 300px !important;
