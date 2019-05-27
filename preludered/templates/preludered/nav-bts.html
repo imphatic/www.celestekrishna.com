@@ -9,11 +9,11 @@
          data-arrows="true"
          data-loop="true">
         {% for bs in bts %}
-        <img src="{% static bs.image %}">
+        <img src="{% static bs.image %}" class="bts-img">
         {% endfor %}
 
         {% for bs in bts %}
-            <a href="{{ bs.href }}" data-caption="{{ bs.title }}"></a>
+            <a href="{{ bs.href }}" data-caption="{{ bs.title }}" class="bts-vid"></a>
         {% endfor %}
     </div>
 </div>
@@ -34,4 +34,5 @@
 <style type="text/css">
     .bt {text-shadow:-2px 1.4px 0px rgba(190, 24, 44, 1) !important}
     .mar {display: none !important}
+
 </style>
