@@ -6,12 +6,13 @@
     <div class="fotorama"
          data-allowfullscreen="true"
          data-nav="false"
-         data-width="100%"
-         data-ratio="800/600"
+         data-maxwidth="610"
+         data-height="430"
+         data-maxheight="550"
          data-arrows="true"
          data-loop="true">
         {% for bs in bts %}
-        <img src="{% static bs.image %}" class="bts-img" data-caption="{{ bs.title }}">
+        <img src="{% static bs.image %}" class="bts-img">
         <a href="{{ bs.href }}" data-caption="{{ bs.title }}" class="bts-vid"></a>
         {% endfor %}
 
@@ -29,9 +30,6 @@
                 
         }).fotorama();
     });
-
-    jQuery('.fotorama__caption__wrap:contains("Lauren")').closest('.fotorama').addClass('portrait');
-
 </script>
 
 <style type="text/css">
