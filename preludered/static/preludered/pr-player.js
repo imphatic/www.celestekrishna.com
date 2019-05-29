@@ -252,7 +252,6 @@ var nav =
             }
         },
         'whats-in-prelude-red' : {
-            'href' : '#whatsinpreludered',
             'click' : function(){
                 nav.load_page('/preludered/nav/whats-in-prelude-red');
             }
