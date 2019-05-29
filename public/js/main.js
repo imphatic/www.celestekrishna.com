@@ -90,7 +90,7 @@ $(document).ready(function() {
          window.location.hash = '#bts';
      });
      $('.nav-whats-in-prelude-red').click(function(event) {
-         event.preventDefault();
+         //event.preventDefault();
          window.location.hash = '#whatsinpreludered';
      });
 
