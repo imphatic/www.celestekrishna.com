@@ -74,6 +74,9 @@ $(document).ready(function() {
         window.location.hash = $(this).attr("href");
         e.preventDefault();
      });
-     
+    $('.nav-whats').click(function(event) {
+         event.preventDefault();
+         location.hash = "#" + this.getAttribute('href').substr(1);
+     });
 
  });
