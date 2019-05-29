@@ -246,9 +246,9 @@ var nav =
                 nav.load_page('/preludered/nav/music-videos');
             }
         },
-        'whats-in-prelude-red' : {
+        'whats' : {
             'click' : function(){
-                nav.load_page('/preludered/nav/whats-in-prelude-red');
+                nav.load_page('/preludered/nav/whats');
             }
         },
         'bts' : {
