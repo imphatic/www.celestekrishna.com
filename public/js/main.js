@@ -65,10 +65,11 @@ $(document).ready(function() {
 
 
      // url hashes
-     //$('.nav-prelude-red').click(function(event) {
-      //   event.preventDefault();
-      //   history.replaceState({}, document.title, ".");
-     //});
+     $('.nav-prelude-red').click(function(e) {
+        e.preventDefault();
+        history.replaceState({}, document.title, ".");
+     });
+
      $(".hashes").click(function(e) {
         window.location.hash = $(this).attr("href");
         e.preventDefault();
