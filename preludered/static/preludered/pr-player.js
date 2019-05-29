@@ -272,11 +272,11 @@ var nav =
                 }
 
                 // Load hash requested location
-                //var hash = window.location.hash.substr(1);
-                //if(hash && typeof this.locations[hash] !== 'undefined')
-                //{
-                //    this.locations[hash].click();
-                //}
+                var hash = window.location.hash.substr(1);
+                if(hash && typeof this.locations[hash] !== 'undefined')
+                {
+                   this.locations[hash].click();
+                }
             }
         }
     },
