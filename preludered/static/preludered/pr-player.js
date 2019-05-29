@@ -251,18 +251,6 @@ var nav =
                 nav.load_page('/preludered/nav/music-videos');
             }
         },
-        'whats-in-prelude-red' : {
-            'hover' : 'nav-whats-in-prelude-red.png',
-            'click' : function(){
-                nav.load_page('/preludered/nav/whats-in-prelude-red');
-            }
-        },
-        'bts' : {
-            'hover' : 'nav-bts.png',
-            'click' : function(){
-                nav.load_page('/preludered/nav/bts');
-            }
-        },
         'digital-copy' : {
             'hover' : 'nav-digital-copy.png'
         },

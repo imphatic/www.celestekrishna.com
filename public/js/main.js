@@ -91,7 +91,7 @@ $(document).ready(function() {
      });
      $('.nav-whats-in-prelude-red').click(function(event) {
          event.preventDefault();
-         location.hash = "#" + this.getAttribute('href').substr(1);
+         window.location.hash = '#whatsinpreludered';
      });
 
  });
