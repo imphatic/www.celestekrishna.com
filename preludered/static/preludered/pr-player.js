@@ -217,13 +217,11 @@ var nav =
 {
     locations : {
         'prelude-red' : {
-            'hover' : 'nav-prelude-red.png',
             'click' : function() {
                 nav.load_page('/preludered/nav/prelude-red');
             }
         },
         'libretto' : {
-            'hover' : 'nav-libretto.png',
             'click' : function() {
                 if(player.currentTrack > 9) {
                     var cur = player.currentTrack - 2;
@@ -234,19 +232,16 @@ var nav =
             }
         },
         'notes' : {
-            'hover' : 'nav-notes.png',
             'click' : function() {
                 nav.load_page('/preludered/nav/notes');
             }
         },
         'credits' : {
-            'hover' : 'nav-credits.png',
             'click' : function() {
                 nav.load_page('/preludered/nav/credits');
             }
         },
         'music-videos' : {
-            'hover' : 'nav-music-videos.png',
             'click' : function() {
                 nav.load_page('/preludered/nav/music-videos');
             }
@@ -261,12 +256,6 @@ var nav =
             'click' : function(){
                 nav.load_page('/preludered/nav/bts');
             }
-        },
-        'digital-copy' : {
-            'hover' : 'nav-digital-copy.png'
-        },
-        'signed-album' : {
-            'hover' : 'nav-signed-album.png'
         }
     },
 
@@ -276,37 +265,19 @@ var nav =
             if (this.locations.hasOwnProperty(key))
             {
                 var loc = this.locations[key];
-
-                // Preload image so its not fetched on each hover
-                this.locations[key].hoverimg = new Image();
-                this.locations[key].hoverimg.src = '/static/img/' + loc.hover;
-
-                // Create hover listener
-                $('.nav-' + key).hover(this.hover(loc),
-                function() {
-                    $('.nav > img').attr('src', '/static/img/nav.png');
-                });
-
+            
                 // Create click listener
                 if(typeof this.click != 'undefined') {
                     $('.nav-' + key).click(this.click(loc))
                 }
 
                 // Load hash requested location
-                var hash = window.location.hash.substr(1);
-                if(hash && typeof this.locations[hash] !== 'undefined')
-                {
-                    this.locations[hash].click();
-                }
+                //var hash = window.location.hash.substr(1);
+                //if(hash && typeof this.locations[hash] !== 'undefined')
+                //{
+                //    this.locations[hash].click();
+                //}
             }
-        }
-    },
-
-    hover : function(loc)
-    {
-        return function(event)
-        {
-            $('.nav > img').attr('src', '/static/img/' + loc.hover);
         }
     },
 

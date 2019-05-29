@@ -89,9 +89,9 @@ $(document).ready(function() {
          event.preventDefault();
          window.location.hash = '#bts';
      });
-     $('.nav-whats-in-prelude-red').click(function(event) {
+     $('.pr-menu .nav-whats-in-prelude-red').click(function(event) {
+         window.location.hash = '#whatsinpreludered';
          event.preventDefault();
-         location.hash = "#" + this.getAttribute('href').substr(1);
      });
 
  });
