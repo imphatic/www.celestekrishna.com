@@ -69,25 +69,9 @@ $(document).ready(function() {
          event.preventDefault();
          history.replaceState({}, document.title, ".");
      });
-     $('.nav-libretto').click(function(event) {
-         event.preventDefault();
-         window.location.hash = '#libretto';
-     });
-     $('.nav-notes').click(function(event) {
-         event.preventDefault();
-         window.location.hash = '#notes';
-     });
-     $('.nav-credits').click(function(event) {
-         event.preventDefault();
-         window.location.hash = '#credits';
-     });
-     $('.nav-music-videos').click(function(event) {
-         event.preventDefault();
-         location.hash = "#" + this.getAttribute('href').substr(1);
-     });
-     $('.nav-bts').click(function(event) {
-         event.preventDefault();
-         window.location.hash = '#bts';
+     $(".hashes").click(function(e) {
+        window.location.hash = $(this).attr("href");
+        e.preventDefault();
      });
      
 
