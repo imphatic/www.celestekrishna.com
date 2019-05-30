@@ -248,7 +248,7 @@ var nav =
         },
         'whatsinpreludered' : {
             'click' : function(){
-                nav.load_page('/preludered/nav/whats');
+                nav.load_page('/preludered/nav/whatsinpreludered');
             }
         },
         'bts' : {
