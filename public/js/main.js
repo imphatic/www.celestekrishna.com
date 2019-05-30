@@ -74,8 +74,9 @@ $(document).ready(function() {
         window.location.hash = $(this).attr("href");
         e.preventDefault();
      });
-    $('.nav-whats').click(function(e) {
-         e.preventDefault();
+    $('.nav-whats').click(function(evt) {
+         evt.preventDefault();
+         evt.stopPropagation();
          window.location.hash = '#whatsinpreludered';
      });
 
