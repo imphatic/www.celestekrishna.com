@@ -119,6 +119,17 @@
         <script type='text/javascript'>
           $(document).ready(function(){
 
+            // url hashes
+             $('.nav-prelude-red').click(function(e) {
+                e.preventDefault();
+                history.replaceState({}, document.title, ".");
+             });
+
+            $(".hashes").click(function(e) {
+               window.location.hash = $(this).attr("href");
+                e.preventDefault();
+             });
+    
               player.init();
               nav.init();
 

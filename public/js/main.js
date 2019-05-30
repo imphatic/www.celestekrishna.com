@@ -63,16 +63,4 @@ $(document).ready(function() {
      mapHoverImgPreload('/static/img/player_cellphone.png', '/static/img/player_classic.png', '/static/img/player_bethelove.png', '/static/img/player_whyiwrite.png', '/static/img/player_amy.png', '/static/img/player_2ways.png', '/static/img/player_whiplash.png', '/static/img/player_notyourboyfriend.png', '/static/img/player_veryfunnymovie.png', '/static/img/player_morelives.png', '/static/img/player_callupthedevil.png', '/static/img/player_sailme.png', '/static/img/player_subway.png');
      
 
-
-     // url hashes
-     $('.nav-prelude-red').click(function(e) {
-        e.preventDefault();
-        history.replaceState({}, document.title, ".");
-     });
-
-    $(".hashes").click(function(e) {
-       window.location.hash = $(this).attr("href");
-        e.preventDefault();
-     });
-
  });
