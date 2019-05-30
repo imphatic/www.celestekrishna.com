@@ -78,6 +78,7 @@ $(document).ready(function() {
          evt.preventDefault();
          evt.stopPropagation();
          window.location.hash = '#whatsinpreludered';
+         window.location.reload();
      });
 
  });
