@@ -88,17 +88,3 @@ class Bts(models.Model):
         verbose_name = 'Bts'
         verbose_name_plural = 'Behind the Scenes'
 
-
-class WhatsinPre(models.Model):
-    order = models.IntegerField(default=0)
-    image = models.FileField(upload_to='uploads/', default='')
-    title = models.CharField(max_length=255, default='')
-
-    def admin_image(self):
-        return '<img src="/static/%s" height="100" />' % self.image
-
-    admin_image.allow_tags = True
-
-    class Meta:
-        verbose_name = 'Whats in Prelude Red Test'
-        verbose_name_plural = 'Whats in Prelude Red Test'

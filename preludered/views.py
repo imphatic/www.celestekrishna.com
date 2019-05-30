@@ -43,7 +43,3 @@ def nav_whatsinpreludered(request):
 def nav_bts(request):
     bts = Bts.objects.order_by('order')
     return render(request, 'preludered/nav-bts.html', {'bts': bts})   
-
-def nav_whatsinpre(request):
-    whatsinpre = WhatsinPre.objects.order_by('order')
-    return render(request, 'preludered/nav-whatsinpre.html', {'whatsinpre': whatsinpre}) 

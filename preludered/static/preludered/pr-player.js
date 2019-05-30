@@ -255,11 +255,6 @@ var nav =
             'click' : function(){
                 nav.load_page('/preludered/nav/bts');
             }
-        },
-        'whatsinpre' : {
-            'click' : function(){
-                nav.load_page('/preludered/nav/whatsinpre');
-            }
         }
     },
 
