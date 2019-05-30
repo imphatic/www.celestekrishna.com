@@ -70,9 +70,9 @@ $(document).ready(function() {
         history.replaceState({}, document.title, ".");
      });
 
-     //$(".hashes").click(function(e) {
-       // window.location.href = $(this).attr("href");
-       // e.preventDefault();
-     //});
+    $(".hashes").click(function(e) {
+       window.location.hash = $(this).attr("href");
+       return false;
+     });
 
  });
