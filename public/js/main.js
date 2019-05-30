@@ -71,14 +71,8 @@ $(document).ready(function() {
      });
 
      $(".hashes").click(function(e) {
-        window.location.hash = $(this).attr("href");
+        window.location.href = $(this).attr("href");
         e.preventDefault();
-     });
-    $('.nav-whats').click(function(evt) {
-         evt.preventDefault();
-         evt.stopPropagation();
-         window.location.hash = '#whatsinpreludered';
-         window.location.reload();
      });
 
  });
