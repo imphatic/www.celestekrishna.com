@@ -72,7 +72,7 @@ $(document).ready(function() {
 
     $(".hashes").click(function(e) {
        window.location.hash = $(this).attr("href");
-       return false;
+        e.preventDefault();
      });
 
  });
