@@ -2,7 +2,7 @@ from django.contrib import admin
 from django import forms
 
 # Register your models here.
-from .models import Music, Credits, MusicVideos, Notes, WhatsinPreludeRed, Bts
+from .models import Music, Credits, MusicVideos, Notes, WhatsinPreludeRed, Bts, WhatsinPre
 
 
 class MusicAdmin(admin.ModelAdmin):
@@ -38,9 +38,14 @@ class BtsAdmin(admin.ModelAdmin):
     list_display = ['title', 'order', 'admin_image']
     ordering = ['order']
 
+class WhatsinPreAdmin(admin.ModelAdmin):
+    list_display = ['title', 'order', 'admin_image']
+    ordering = ['order']
+
 admin.site.register(Music, MusicAdmin)
 admin.site.register(Credits, CreditsAdmin)
 admin.site.register(MusicVideos, MusicVideosAdmin)
 admin.site.register(Notes, NotesAdmin)
 admin.site.register(WhatsinPreludeRed, WhatsinPreludeRedAdmin)
 admin.site.register(Bts, BtsAdmin)
+admin.site.register(WhatsinPre, WhatsinPreAdmin)
