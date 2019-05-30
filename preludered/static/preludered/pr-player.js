@@ -246,7 +246,7 @@ var nav =
                 nav.load_page('/preludered/nav/music-videos');
             }
         },
-        'whats' : {
+        'whatsinpreludered' : {
             'click' : function(){
                 nav.load_page('/preludered/nav/whats');
             }
