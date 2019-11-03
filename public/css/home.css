@@ -76,6 +76,9 @@ nav.main ul {
     nav.main ul {
         font-size: 13px
     }
+    .embed iframe {
+        width: 100%
+    }
     .info-msg {
         position: relative;
         right: inherit;
