@@ -55,7 +55,8 @@ nav.main ul {
 
 .embed {
     margin: 2em auto;
-    display: block
+    display: block;
+    text-align: center;
 }
 
 .info-msg {
@@ -74,6 +75,12 @@ nav.main ul {
     }
     nav.main ul {
         font-size: 13px
+    }
+    .info-msg {
+        position: relative;
+        right: inherit;
+        bottom: inherit;
+        text-align: center
     }
 }
 /* 2.0 Edits - LS
