@@ -76,6 +76,9 @@ nav.main ul {
     nav.main ul {
         font-size: 13px
     }
+    .embed {
+        text-align: left;
+    }
     .embed iframe {
         width: 100%;
         max-width: 300px
