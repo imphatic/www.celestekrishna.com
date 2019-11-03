@@ -42,7 +42,8 @@ nav.main ul {
         }
 
 .page {
-    padding: 5em 1em 2em
+    padding: 5em 1em 2em;
+    position: relative;
 }
 
 .bandsInTown {
@@ -50,9 +51,18 @@ nav.main ul {
  }
  .vids {
     display:none;
- }
+}
 
+.embed {
+    margin: 2em auto;
+    display: block
+}
 
+.info-msg {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
 @media screen and (min-width:1024px) {
     .bandsInTown {
         max-width:800px;
